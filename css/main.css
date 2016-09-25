@@ -473,6 +473,7 @@ body.discover {
   -moz-transition: background .3s ease;
   transition: background .3s ease;
   text-decoration: none;
+  margin-bottom: 20px;
 }
 
 .btn-custom:hover {
@@ -643,6 +644,17 @@ Author's custom styles
 .info-list > li > span {
   font-weight: 300;
   color: rgba(0,0,0,.6);
+}
+.info-list > li > span a {
+  font-size: 30px;
+  margin-right: 10px;
+  color: rgba(0,0,0,.6);
+  -webkit-transition: color .3s ease;
+  -moz-transition: color .3s ease;
+  transition: color .3s ease;
+}
+.info-list > li > span a:hover {
+  color: rgba(0,0,0,1);
 }
 .info-list p {
   margin-bottom: 10px;
