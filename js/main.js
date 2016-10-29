@@ -1,7 +1,6 @@
 // Avoid `console` errors in browsers that lack a console.
 (function() {
   var method;
-  var dateObj = new Date();
   var noop = function() {};
   var methods = [
     'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
@@ -18,7 +17,6 @@
       console[method] = noop;
     }
   }
-  document.getElementById('date-of-birth').text = (dateObj.getFullYear() - 1988) + ' Years';
 }());
 // Place any jQuery/helper plugins in here.
 window.onhashchange = function(event) {
