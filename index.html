@@ -185,11 +185,16 @@
                     $introText.classList.remove('visuallyhidden');
                     $discoverText.classList.add('visuallyhidden');
                 }
+            },
+            updateExperience = function () {
+                var startExp = new Date('1/11/2009');
+                var tillDateExp = new Date();
+                var timeDiff = Math.abs(tillDateExp.getTime() - startExp.getTime());
+                var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+                document.getElementById('exp').innerText = (diffDays / 365).toFixed(1);
             };
             window.onhashchange();
-            var fullDate = new Date(), 
-                fullYear = fullDate.getFullYear();
-            document.getElementById('exp').innerText = (fullYear - 2010);
+            updateExperience();
         })();
     </script>
 </body>
