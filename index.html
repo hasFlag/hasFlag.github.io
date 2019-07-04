@@ -72,6 +72,23 @@
       padding: 0;
       list-style: none;
     }
+
+    #gitProjects li {
+      display: inline-block;
+      margin: 5px;
+      padding-right: 0px;
+    }
+
+    #gitProjects a {
+      padding: 5px;
+      border: 1px solid #079fff;
+      display: block;
+    }
+
+    #gitProjects a:hover {
+      border: 1px solid #fe414d;
+      text-decoration: none;
+    }
   </style>
 </head>
 
@@ -106,7 +123,28 @@
       <li><a href="https://www.github.com/gsin11" title="goto Github" target="_blank" rel="noopener">Github</a></li>
       <li><a href="http://stackoverflow.com/story/gsin11" title="goto stackoverflow" target="_blank" rel="noopener">Stackoverflow</a></li>
     </ul>
+    <h2>GIT projects</h2>
+    <ul id="gitProjects"></ul>
   </div>
+  <script>
+    window.addEventListener('load', () => {
+      let url = "https://api.github.com/users/gsin11/repos";
+      fetch(url)
+        .then(res => res.json())
+        .then((out) => {
+          let data = "";
+          out.map(obj => {
+            data += `<li>
+              <a href="${obj.html_url}" title="goto ${obj.name}" target="_blank" rel="noopener">${obj.name}</a>
+            </li>`;
+          });
+          document.getElementById("gitProjects").innerHTML = data;
+        })
+        .catch(() => {
+          console.log("couldn't load JSON");
+        });
+    });
+  </script>
 </body>
 
 </html>
