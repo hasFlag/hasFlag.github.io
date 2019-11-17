@@ -1,0 +1,104 @@
+.project-grid {
+    @include grid-container;
+}
+.project-grid__teaserlist {
+    padding-top: $spacing-base * 3;
+}
+
+.project-grid__teaser {
+    display: block;
+    margin-bottom: $spacing-base * 5;
+    position: relative;
+
+    @include breakpoint(large) {
+        margin-bottom: $spacing-base * 10;
+    }
+}
+
+.project-grid__date {
+    right: 0;
+    position: absolute;
+    top: -2.4em;
+
+    @include text-style(x-small);
+
+    @include breakpoint(large) {
+        right: -2.2em;
+        top: 0;
+        transform: rotate(90deg);
+    }
+}
+
+.project-grid__image {
+    transition: .2s ease;
+    width: 100%;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+}
+
+.project-grid__image-zoom-container {
+    overflow: hidden;
+}
+
+.project-grid__title {
+    @include text-style(heading-4);
+    margin-top: $spacing-base * 2.5;
+
+    & a {
+        box-shadow: none;
+    }
+}
+
+.project-grid__description {
+    @include text-style(small);
+    margin-top: $spacing-base * 1.3;
+    margin-bottom: 0;
+}
+
+/*
+ * No JS layout styles
+ */
+
+.project-grid__teaserlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project-grid__teaser {
+    display: block;
+}
+
+@include breakpoint(small) {
+    .project-grid__teaser {
+        flex: 0 0 47.25%;
+    }
+}
+
+@include breakpoint(large) {
+    .project-grid__teaser {
+        flex: 0 0 45.55%;
+    }
+}
+
+/*
+ * JS-Masonry sizes
+ * The .project-grid__gutter-sizer element is used by the Masonry javascript
+ * to define responsive gutter sizes. It is set to "display: none" by default
+ * and will be turned visible again by the script.
+ */
+
+.project-grid__gutter-sizer { width: 0; display: none} 
+
+@include breakpoint(small) {
+    .project-grid__teaser { width: 47.25%; }
+    .project-grid__gutter-sizer { width: 5.5%; } 
+}
+
+@include breakpoint(large) {
+    .project-grid__teaser { width: 45.55%; }
+    .project-grid__gutter-sizer { width: 8.9%; } 
+}
+

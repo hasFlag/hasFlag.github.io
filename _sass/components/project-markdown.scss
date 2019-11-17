@@ -1,0 +1,39 @@
+.project-markdown {
+    @include grid-container;
+
+    margin-top: $spacing-base * 6;
+    
+    @include breakpoint(large) {
+        margin-top: $spacing-base * 12;
+    }
+}
+
+.project-markdown img {
+    width: 100%;
+}
+
+.project-markdown p {
+    @include breakpoint(x-large) {
+        width: 90%;
+    }
+}
+
+.project-markdown p + p,
+.project-markdown h1 + p,
+.project-markdown h2 + p,
+.project-markdown h3 + p {
+    margin-top: $spacing-base * 3;
+
+    @include breakpoint (large) {
+        margin-top: $spacing-base * 4;
+    }
+}
+
+.project-markdown-video + p,
+.project-markdown-image + p {
+    margin-top: $spacing-base * 6;
+
+    @include breakpoint (large) {
+        margin-top: $spacing-base * 12;
+    }
+}

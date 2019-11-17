@@ -1,0 +1,57 @@
+.project-abstract {
+    @include grid-container;
+}
+
+.project-abstract__title {
+    @include text-style(heading-1);
+    margin-top: $spacing-base * 13;
+
+    @include breakpoint(large) {
+        margin-top: $spacing-base * 18;
+        font-size: $text-desktop-base-size * $text-desktop-font-scale * $text-desktop-font-scale * $text-desktop-font-scale * $text-desktop-font-scale;
+    }
+}
+
+.project-abstract__text {
+    @include text-style(body);
+    margin-top: $spacing-base * 3;
+
+    @include breakpoint(large) {
+        margin-top: $spacing-base * 4;
+    }
+
+    @include breakpoint(x-large) {
+        width: 90%;
+    }
+}
+
+.project-abstract__infos {
+    @include text-style(body);
+    margin-top: $spacing-base * 3;
+
+    @include breakpoint(large) {
+        margin-top: $spacing-base * 4;
+    }
+}
+
+.project-abstract__infos-text,
+.project-abstract__infos-header {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: $spacing-base * 1;
+    vertical-align: top;
+}
+
+.project-abstract__infos-text {
+    padding-left: $spacing-base * 2.5;
+
+    @include breakpoint(medium) {
+        max-width: 80%;
+        padding-left: $spacing-base * 6;
+    }
+}
+
+.project-abstract__infos-header {
+    @include text-style(bold);
+}

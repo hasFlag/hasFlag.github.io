@@ -1,0 +1,15 @@
+{
+  "short_name": "gsin.in",
+  "name": "gsin.in",
+  "icons": [
+    {
+      "src":"apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "display": "standalone"
+}

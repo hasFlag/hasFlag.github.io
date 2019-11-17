@@ -1,0 +1,118 @@
+.hero-introduction {
+    background-color: $color-black;
+    overflow: hidden;
+}
+
+.hero-introduction__grid-container {
+    @include grid-container;
+    padding-top: $spacing-base * 20;
+    padding-bottom: $spacing-base * 10;
+    position: relative;
+
+    @include breakpoint(medium) {
+        padding-top: $spacing-base * 10;
+    }
+
+    @include breakpoint(large) {
+        padding-top: $spacing-base * 10;
+    }
+}
+
+/*
+ * Text
+ */
+
+.hero-introduction__heading,
+.hero-introduction__text {
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint(medium) {
+        width: 60%;
+    }
+}
+
+.hero-introduction__heading {
+    @include text-style(heading-1);
+    @include text-style(white);
+    margin-top: 0;
+}
+
+.hero-introduction__text {
+    @include text-style(body);
+    @include text-style(white);
+}
+
+.hero-introduction__text a {
+    box-shadow: 0 4px 0 -2px $color-accent-on-dark;
+    color: inherit;
+
+    &:hover {
+        box-shadow: 0 4px 0 -2px $color-accent-on-dark;
+        color: $color-accent-on-dark;
+      }
+}
+
+/*
+ * Hero Links
+ */
+
+.hero-introduction__linkcontainer {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(large) {
+        flex-direction: row;
+    }
+}
+
+.hero-introduction__link {
+    @include text-style(body);
+    @include text-style(white);
+
+    margin-top: 0;
+    margin-right: $spacing-base * 4;
+    margin-bottom: 0;
+}
+
+.hero-introduction__link-text {
+    box-shadow: 0 4px 0 -2px $color-accent-on-dark;
+}
+
+.hero-introduction__link:hover .hero-introduction__link-text {
+    color: $color-accent-on-dark;
+}
+
+.hero-introduction__link-icon {
+    font-size: 1.8em;
+    margin-right: 0.2em;
+    position: relative;
+    top: .2em;
+}
+
+/*
+ * Image
+ */
+
+.hero-introduction__image {
+    position: absolute;
+    right: -100px;
+    top: -130px;
+    transform: rotate(270deg) scale(0.5, 0.5);
+
+    @include breakpoint(small) {
+        right: -50px;
+        transform: rotate(270deg) scale(0.6,0.6);
+    }
+
+    @include breakpoint(medium) {
+        right: 0px;
+        top: auto;
+        bottom: 0px;
+        transform: none;
+    }
+
+    @include breakpoint(x-large) {
+        right: 0px;
+    }
+}
