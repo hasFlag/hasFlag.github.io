@@ -25,7 +25,7 @@ url: "https://www.gsin.in" # the base hostname & protocol for your site, e.g. ht
 twitter_username: gsin11
 github_username:  gsin11
 
-google_analytics: UA-ASDAS
+google_analytics: UA-84735518-1
 
 permalink: /:title/
 
