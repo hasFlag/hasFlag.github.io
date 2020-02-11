@@ -57,6 +57,12 @@
     margin-bottom: 0;
 }
 
+.project-grid__description_small {
+  @include text-style(x-small);
+  margin-top: $spacing-base;
+  margin-bottom: 0;
+}
+
 /*
  * No JS layout styles
  */
@@ -90,15 +96,15 @@
  * and will be turned visible again by the script.
  */
 
-.project-grid__gutter-sizer { width: 0; display: none} 
+.project-grid__gutter-sizer { width: 0; display: none}
 
 @include breakpoint(small) {
     .project-grid__teaser { width: 47.25%; }
-    .project-grid__gutter-sizer { width: 5.5%; } 
+    .project-grid__gutter-sizer { width: 5.5%; }
 }
 
 @include breakpoint(large) {
     .project-grid__teaser { width: 45.55%; }
-    .project-grid__gutter-sizer { width: 8.9%; } 
+    .project-grid__gutter-sizer { width: 8.9%; }
 }
 

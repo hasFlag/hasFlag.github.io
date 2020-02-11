@@ -1,18 +1,34 @@
 ---
 layout: default
+
+custom-javascript:
+- /assets/js/imagesloaded.pkgd.min.js
+- /assets/js/masonry.pkgd.min.js
+- /assets/js/project-grid.js
 ---
 
-<section class="project-abstract">
-    <h1 class="project-abstract__title">{{ page.title }}</h1>
-    <p class="project-abstract__text">{{ page.subheader }}</p>
-
-    <!-- <table class="project-abstract__infos">
-        <tr><td class="project-abstract__infos-header">Role</td><td class="project-abstract__infos-text">{{ page.role }}</td></tr>
-        <tr><td class="project-abstract__infos-header">Client</td><td class="project-abstract__infos-text">{{ page.client }}</td></tr>
-        <tr><td class="project-abstract__infos-header">Year</td><td class="project-abstract__infos-text">{{ page.date | date: "%Y" }}</td></tr>
-    </table> -->
+<section class="hero-introduction gallery">
+  <div class="hero-introduction__grid-container">
+    <h1 class="hero-introduction__heading">{{ page.heading }}</h1>
+  </div>
 </section>
 
-<section class="project-markdown">
-    {{ content }}
+<section class="project-grid">
+  <div class="project-grid__teaserlist">
+    {% for project in site.data.photos %}
+      <div class="project-grid__teaser">
+        <a href="{{ project.full_img_src }}" title="Click to get full resolution">
+          <div class="project-grid__image-zoom-container">
+            <img src="{{ project.img_src }}" alt="{{ project.description }}"
+              class="project-grid__image">
+          </div>
+        </a>
+        <h3 class="project-grid__title"><a href="{{ project.url }}">{{ project.title }}</a></h3>
+        <p class="project-grid__description_small">{{ project.description}}</p>
+        <p class="project-grid__description_small">{{ project.location}}</p>
+        <p class="project-grid__date">{{ project.year | date: "%Y" }}</p>
+      </div>
+    {% endfor %}
+    <div class="project-grid__gutter-sizer"></div>
+  </div>
 </section>

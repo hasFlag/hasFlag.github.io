@@ -2,6 +2,10 @@
 layout: photography
 categories: photography
 
-title: Coming soon... # Site title
+id: photography # Will be assigned to body tag as an ID. Used to color the header black.
+title: Photography # Site title
+
+# heading
+heading: Photography
 
 ---
