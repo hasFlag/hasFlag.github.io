@@ -40,9 +40,6 @@ footer:
     - text: Email
       url: mailto:gurupreetsingh2000@gmail.com
       icon: icon-mail-inline
-    - text: Photography
-      url: /photography/
-      icon: icon-dribbble
     - text: Resume
       url: /assets/downloads/resume-gurpreet-singh.pdf
       icon: icon-cv-inline
