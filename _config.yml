@@ -21,7 +21,7 @@ author: Gurpreet Singh
 description: >- # this means to ignore newlines until "baseurl:"
   I'm Gurpreet Singh, a Web Architect based in Frankfurt. Take a look at my portfolio!
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.gsin.in" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.gurpreetsingh.de" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: gsin11
 github_username:  gsin11
 
