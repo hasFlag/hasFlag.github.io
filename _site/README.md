@@ -2,6 +2,8 @@
 
 My portfolio on GitHub Pages
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/09b0eafb-6157-47b6-8103-70283c299d8b/deploy-status)](https://app.netlify.com/sites/goofy-edison-93b432/deploys)
+
 ## Tech stack
 
 * **Static site generator:** [Jekyll](https://jekyllrb.com/)
