@@ -10,6 +10,7 @@ lib-cov
 pids
 logs
 results
+.cache
 
 npm-debug.log
 node_modules
@@ -17,4 +18,3 @@ node_modules
 *.sublime-*
 .DS_Store
 public
-.cache
