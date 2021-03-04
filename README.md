@@ -1,5 +1,5 @@
 <h1>
-  <a href="https://gsin.com">
+  <a href="https://gsin.in">
     gsin.in
   </a>
 </h1>
