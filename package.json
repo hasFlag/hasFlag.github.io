@@ -32,7 +32,7 @@
   "devDependencies": {
     "prettier": "2.2.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/gsin11/gsin11.github.io#readme",
   "keywords": [
     "gatsby"
   ],
@@ -40,7 +40,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/gsin11/gsin11.github.io.git"
   },
   "scripts": {
     "build": "gatsby build",
