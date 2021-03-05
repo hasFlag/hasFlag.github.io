@@ -2,7 +2,7 @@
   "name": "gsin11.github.io",
   "private": true,
   "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "author": "Gurpreet Singh <gurupreetsingh2000@gmail.com>",
   "dependencies": {
     "gatsby": "^3.0.0",
@@ -29,7 +29,8 @@
     "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "gatsby-plugin-minify": "^0.3.0"
   },
   "homepage": "https://github.com/gsin11/gsin11.github.io#readme",
   "keywords": [
