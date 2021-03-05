@@ -1,4 +1,5 @@
 import * as React from "react"
+import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import { Link } from "gatsby"
 
 const Layout = ({ location, title, children }) => {
@@ -22,7 +23,23 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
+      <header className="global-header">
+        {header}
+        <ThemeToggler>
+          {({ theme, toggleTheme }) => (
+            <span className="toggle-theme-wrapper">
+              <label>
+                <input
+                  type="checkbox"
+                  onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
+                  checked={theme === 'dark'}
+                />{' '}
+                Dark mode
+              </label>
+            </span>
+          )}
+        </ThemeToggler>
+      </header>
       <main>{children}</main>
       <footer>
         <ul>
