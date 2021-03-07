@@ -28,7 +28,7 @@ const Layout = ({ location, title, children }) => {
         <ThemeToggler>
           {({ theme, toggleTheme }) => (
             <span className="toggle-theme-wrapper">
-              <label for="themeToggler">
+              <label htmlFor="themeToggler">
                 <input
                   id="themeToggler"
                   aria-live="assertive" aria-label={`click to enable ${theme === 'dark' ? 'light' : 'dark'} mode`}

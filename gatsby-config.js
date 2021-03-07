@@ -46,6 +46,7 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          `gatsby-remark-reading-time`,
         ],
       },
     },
@@ -89,6 +90,9 @@ module.exports = {
                     html
                     fields {
                       slug
+                      readingTime {
+                        text
+                      }
                     }
                     frontmatter {
                       title
