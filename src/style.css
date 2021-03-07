@@ -85,6 +85,11 @@ body {
   font-size: var(--fontSize-1);
   color: var(--color-text);
   background-color: var(--color-bg);
+
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+  -moz-transition: background-color 0.5s ease, color 0.5s ease;
+  -o-transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 body.dark {
@@ -95,6 +100,11 @@ body.dark {
   --color-heading-black: #fff;
   --color-bg: #282c35;
   --color-theme-toggle: #FFC600;
+
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+  -moz-transition: background-color 0.5s ease, color 0.5s ease;
+  -o-transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 footer {
