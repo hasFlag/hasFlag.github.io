@@ -28,8 +28,10 @@ const Layout = ({ location, title, children }) => {
         <ThemeToggler>
           {({ theme, toggleTheme }) => (
             <span className="toggle-theme-wrapper">
-              <label>
+              <label for="themeToggler">
                 <input
+                  id="themeToggler"
+                  aria-live="assertive" aria-label={`click to enable ${theme === 'dark' ? 'light' : 'dark'} mode`}
                   type="checkbox"
                   onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
                   checked={theme === 'dark'}

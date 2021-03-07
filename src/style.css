@@ -98,7 +98,7 @@ body.dark {
   --color-text-light: #fff;
   --color-heading: #fff;
   --color-heading-black: #fff;
-  --color-bg: #282c35;
+  --color-bg: #2C3539;
   --color-theme-toggle: #FFC600;
 
   -webkit-transition: background-color 0.5s ease, color 0.5s ease;

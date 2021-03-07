@@ -44,7 +44,7 @@ const Bio = () => {
       />
       {author?.name && (
         <p>
-          I am <strong><a href={`https://twitter.com/${social?.twitter || ``}`}>{author.name}</a></strong> 👨🏻‍💻
+          I am <strong><a href={`https://twitter.com/${social?.twitter || ``}`} aria-label={`click to visit ${author.name}'s twitter profile`}>{author.name}</a></strong> 👨🏻‍💻
           <br />
           {author?.summary || null}.
         </p>
