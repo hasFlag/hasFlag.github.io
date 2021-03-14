@@ -56,7 +56,7 @@
   --fontSize-7: 2.100rem;
   --color-accent: #f1faee;
 
-  --color-primary: #e63946;
+  --color-primary: #0000b5;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
@@ -93,7 +93,7 @@ body {
 }
 
 body.dark {
-  --color-primary: #ffba08;
+  --color-primary: #00FFFF;
   --color-text: #fff;
   --color-text-light: #fff;
   --color-heading: #fff;
