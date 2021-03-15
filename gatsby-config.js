@@ -13,6 +13,7 @@ module.exports = {
     googleVerificationId: `xejEbN0SW3h_El6KLaPjB9JR1Xzuy3pahey27zavIIg`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,

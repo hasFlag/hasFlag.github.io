@@ -57,6 +57,9 @@ const Layout = ({ location, title, children }) => {
           <li>
             <a href="https://stackoverflow.com/users/2439056/gurpreet-singh">stack overflow</a>
           </li>
+          <li>
+            <a href="/rss.xml">rss</a>
+          </li>
         </ul>
       </footer>
     </div>
