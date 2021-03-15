@@ -5,8 +5,8 @@ module.exports = {
       name: `Gurpreet Singh`,
       summary: `Each space has its story`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Gurpreet Singh, front-end architect`,
+    siteUrl: `https://gsin.in/`,
     social: {
       twitter: `gsin11`
     },
@@ -114,7 +114,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Gurpreet Singh Blog`,
-        short_name: `GatsbyJS`,
+        short_name: `GS`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#e63946`,
