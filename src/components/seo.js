@@ -21,6 +21,7 @@ const SEO = ({ description, lang, meta, title }) => {
             social {
               twitter
             }
+            googleVerificationId
           }
         }
       }
@@ -70,6 +71,10 @@ const SEO = ({ description, lang, meta, title }) => {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `google-site-verification`,
+          content: site.siteMetadata?.googleVerificationId,
+        }
       ].concat(meta)}
     />
   )

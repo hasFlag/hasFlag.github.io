@@ -10,6 +10,7 @@ module.exports = {
     social: {
       twitter: `gsin11`
     },
+    googleVerificationId: `xejEbN0SW3h_El6KLaPjB9JR1Xzuy3pahey27zavIIg`,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -63,6 +64,7 @@ module.exports = {
                 description
                 siteUrl
                 site_url: siteUrl
+                googleVerificationId
               }
             }
           }
