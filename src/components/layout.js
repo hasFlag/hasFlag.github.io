@@ -31,7 +31,7 @@ const Layout = ({ location, title, children }) => {
               <label htmlFor="themeToggler">
                 <input
                   id="themeToggler"
-                  aria-live="assertive" aria-label={`click to enable ${theme === 'dark' ? 'light' : 'dark'} mode`}
+                  aria-label="Switch between Dark and Light mode"
                   type="checkbox"
                   onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
                   checked={theme === 'dark'}
