@@ -1,7 +1,7 @@
 ---
 title: Motion Blur Photography
 date: "2020-11-28T22:12:03.284Z"
-description: "This is the hardest way to capture motion but the resulting pictures are often the best."
+featured: ./featured.jpg
 ---
 ![Motion Photo](./motion-photo.jpeg)
 

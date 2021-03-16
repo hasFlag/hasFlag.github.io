@@ -1,7 +1,7 @@
 ---
 title: 7 Street Photography Secrets
 date: "2020-10-10T22:40:32.169Z"
-description: "There are some tricks that I generally use in order to keep my photos laser-sharp even when they are moving."
+featured: ./featured.jpg
 ---
 It is not easy to become a street photographer since every object is moving. Nevertheless, you still have a powerful weapon in your hands that can shoot anything with patience and the right time.
 

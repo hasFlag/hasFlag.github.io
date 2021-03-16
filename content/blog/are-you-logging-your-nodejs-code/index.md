@@ -1,7 +1,7 @@
 ---
 title: Are you logging your NodeJS code?
 date: "2021-01-16T22:40:32.169Z"
-description: "If you are a developer, have you asked yourself a question, \"Am I logging or not?\""
+featured: ./featured.jpg
 ---
 
 ![Logger](./logging.jpg)

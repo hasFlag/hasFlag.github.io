@@ -1,7 +1,7 @@
 ---
 title: Express.js + EJS complete solution
 date: "2021-03-02T22:40:32.169Z"
-description: "Hosting my first application on Strapi application on Heroku"
+featured: ./featured.jpg
 ---
 ![express and ejs](./expressjs+ejs.jpg)
 

@@ -1,7 +1,7 @@
 ---
 title: Is your Web Application ready for Vision Deficient audience?
 date: "2020-10-02T22:40:32.169Z"
-description: "people having vision deficiency can see objects but not like others."
+featured: ./featured.jpg
 ---
 ![vision-deficiency](./vision-deficiency.jpeg)
 
