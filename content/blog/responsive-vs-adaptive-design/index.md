@@ -1,7 +1,7 @@
 ---
 title: Responsive vs. Adaptive design
 date: "2020-09-06T23:46:37.121Z"
-description: "Every site is responsive in behavior until you want to make it adaptive."
+featured: ./featured.jpg
 ---
 ![featured.image](./featured-image.jpeg)
 

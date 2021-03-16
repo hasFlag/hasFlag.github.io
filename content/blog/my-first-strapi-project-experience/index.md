@@ -1,7 +1,7 @@
 ---
 title: My first Strapi project experience
 date: "2021-02-25T22:40:32.169Z"
-description: "Strapi is the leading open-source JavaScript based headless CMS."
+featured: ./featured.jpg
 ---
 ![strapi](./strapi.jpeg)
 
