@@ -41,7 +41,9 @@ const BlogIndex = ({ data, location }) => {
                 itemType="http://schema.org/Article"
               >
                 <div className="post-img-wrapper">
-                  <GatsbyImage image={image} alt={post.frontmatter.date} />
+                  <Link to={post.fields.slug} itemProp="url">
+                    <GatsbyImage image={image} alt={post.frontmatter.date} />
+                  </Link>
                 </div>
                 <div className="post-content">
                   <header>
