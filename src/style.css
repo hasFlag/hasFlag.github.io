@@ -310,6 +310,14 @@ a:focus {
   text-align: center;
   width: 100%;
   margin-bottom: var(--spacing-4);
+  -webkit-transition: transform .2s ease;
+  -moz-box-transition: transform .2s ease;
+  transition: transform .2s ease;
+}
+.post-list-item .post-img-wrapper:hover {
+  -webkit-transform: scale(0.98); /* Safari 3-8 */
+  -moz-box-transform: scale(0.98);
+  transform: scale(0.98);
 }
 
 .post-list-item h2 {
