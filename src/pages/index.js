@@ -50,9 +50,8 @@ const BlogIndex = ({ data, location }) => {
                         <span itemProp="headline">{title}</span>
                       </Link>
                     </h2>
-                    <small>{post.frontmatter.date}</small>
-                    {` - `}
-                    <small>⏱ {post.fields.readingTime.text}</small>
+                    <small itemProp="datePublished">{post.frontmatter.date}</small>
+                    <small><span aria-hidden="true"> ⏱ </span>{post.fields.readingTime.text}</small>
                   </header>
                   <section>
                     <p
