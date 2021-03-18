@@ -5,7 +5,7 @@ module.exports = {
       name: `Gurpreet Singh`,
       summary: `Each space has its story`,
     },
-    description: `Gurpreet Singh, front-end architect`,
+    description: `Frontend Architect at PublicisSapient, Frontend Consultant interested in making lives of frontend developers easier.`,
     siteUrl: `https://gsin.in/`,
     social: {
       twitter: `gsin11`
@@ -126,5 +126,6 @@ module.exports = {
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-minify`,
     'gatsby-plugin-dark-mode',
+    `gatsby-plugin-csp`,
   ],
 }
