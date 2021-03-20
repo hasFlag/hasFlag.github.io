@@ -8,7 +8,7 @@ These days I often see developers struggle or invest too much time to create pro
 
 Let me take you through the step-by-step setup.
 
-> You can check running application [here](https://nodejs-passport-service.herokuapp.com/)
+> You can check running application [here](https://nodejs-login-service.herokuapp.com/)
 
 ## <a name="project-structure"></a> Project structure
 ```
@@ -537,6 +537,6 @@ button.large {
 It's time to run the code, open the project in the terminal/command line, and trigger the `npm run dev` command in order to run the project in dev mode (it will use `nodemon`).
 
 ## <a name="deployment"></a> Deployment
-If you find your project is running fine, then you can deploy it on any nodejs based hosting partner. I am using a free Heroku instance to host this project. You can check the running application here: [https://nodejs-passport-service.herokuapp.com/](https://nodejs-passport-service.herokuapp.com/)
+If you find your project is running fine, then you can deploy it on any nodejs based hosting partner. I am using a free Heroku instance to host this project. You can check the running application here: [https://nodejs-login-service.herokuapp.com/](https://nodejs-login-service.herokuapp.com/)
 
 *Make sure to add environment variable into your pipeline (Config Vars in Heroku)*
