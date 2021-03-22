@@ -1,6 +1,7 @@
 ---
 title: 5 Food Photography Tips
 date: "2020-11-15T22:40:32.169Z"
+tags: ["photography", "tutorials"]
 ---
 
 > I love photography, I love food, and I love traveling, and to put those three things together would just be the ultimate dream.  [Jamie Chung](https://www.quotemaster.org/author/Jamie+Chung) 

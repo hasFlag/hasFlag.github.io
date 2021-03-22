@@ -8,12 +8,13 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
+  const { title, description, date, tags } = post.frontmatter
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
+        title={title}
+        description={description || post.excerpt}
       />
       <article
         className="blog-post"
@@ -21,8 +22,16 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <small itemProp="datePublished">{post.frontmatter.date}</small>{" "}<small><span aria-hidden="true">⏱ </span>{post.fields.readingTime.text}</small>
+          <h1 itemProp="headline">{title}</h1>
+          <time itemProp="datePublished">{date}</time>
+          {" - "}
+          <small>
+            {tags.map((tag, index) => {
+              return <Link key={`tag_${index}`} to={`/tags/${tag}`}>{(index ? ', ' : '') + tag}</Link>
+            })}
+          </small>
+          {" - "}
+          <small>{post.fields.readingTime.text}</small>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -86,6 +95,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

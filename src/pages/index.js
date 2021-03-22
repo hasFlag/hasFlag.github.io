@@ -14,7 +14,7 @@ const Index = ({ data, location }) => {
       <SEO title="Gurpreet Singh" />
       <Bio />
       <section className="segment">
-        <div>
+        <div className="has-border">
           <h2>Latest Posts</h2>
           <Link to="/blog">All posts</Link>
         </div>
@@ -29,7 +29,7 @@ const Index = ({ data, location }) => {
                   <Link to={post.fields.slug} itemProp="url">
                     <span itemProp="headline">{title}</span>
                   </Link>
-                  <p><time itemProp="datePublished">{post.frontmatter.date}</time><small><span aria-hidden="true"> - ⏱ </span>{post.fields.readingTime.text}</small></p>
+                  <p><time itemProp="datePublished">{post.frontmatter.date}</time>{" - "}<small>{post.fields.readingTime.text}</small></p>
                 </li>
               )
             })}

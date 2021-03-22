@@ -1,6 +1,7 @@
 ---
 title: How I explained Web designing to my Grandmother
 date: "2020-09-06T23:46:37.121Z"
+tags: ["javascript", "tutorials"]
 ---
 I would like to share a question which I often asked my grandmother, “What are you doing on this laptop?”. I am sure it is difficult for you also to explain what is web designing to your grandparents.
 

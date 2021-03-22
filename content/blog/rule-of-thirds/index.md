@@ -1,6 +1,7 @@
 ---
 title: Rule of Thirds
 date: "2020-11-29T22:12:03.284Z"
+tags: ["photography", "tutorials"]
 ---
 The most common rule of photography is known as the “rule of thirds”. With this technique, you divide your photo into 3 divisions horizontally and vertically, which means your subject is placed on intersection lines.
 

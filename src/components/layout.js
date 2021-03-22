@@ -5,35 +5,22 @@ import ToggleMode from "./toggleMode"
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
-  let header
 
   const isActive = (slug) => {
     var re = new RegExp(slug, 'gi')
     return re.test(location.pathname) ? "active" : ""
   }
 
-  if (isRootPath) {
-    header = (
-      <h1 className="main-heading">
-        <Link to="/" aria-label="Spread Knowledge">{title}</Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <Link className="header-link-home" to="/" aria-label="Spread Knowledge">
-        {title}
-      </Link>
-    )
-  }
-
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">
         <div>
-          {header}
+          <h1 className="main-heading">
+            <Link to="/" aria-label="Spread Knowledge">{title}</Link>
+          </h1>
           <ToggleMode />
         </div>
-        <div>
+        <div className="has-border">
           <nav>
             <Link to="/blog" className={isActive('blog')}>Blog</Link>
             <Link to="/about" className={isActive('about')}>About</Link>

@@ -299,8 +299,11 @@ small {
 .segment > div:first-child {
   display: flex;
   justify-content: space-between;
-  border-bottom: var(--color-primary) 1px solid;
   align-items: baseline;
+}
+
+.has-border {
+  border-bottom: var(--color-primary) 1px solid;
 }
 
 .global-header > div:last-child {
@@ -426,7 +429,6 @@ a.active {
 .post-list-item {
   margin-bottom: var(--spacing-8);
   margin-top: var(--spacing-8);
-  padding: var(--spacing-3);
 }
 
 .post-list-item p {
