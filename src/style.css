@@ -306,7 +306,8 @@ small {
   border-bottom: var(--color-primary) 1px solid;
 }
 
-.global-header > div:last-child {
+.global-header > div:last-child,
+.blog-post > header {
   padding-bottom: var(--spacing-5);
 }
 
