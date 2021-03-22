@@ -125,20 +125,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-minify`,
-    'gatsby-plugin-dark-mode',
-    {
-      resolve: `gatsby-plugin-csp`,
-      options: {
-        disableOnDev: false,
-        reportOnly: false, // Changes header to Content-Security-Policy-Report-Only for csp testing purposes
-        mergeScriptHashes: false, // you can disable scripts sha256 hashes
-        mergeStyleHashes: false, // you can disable styles sha256 hashes
-        mergeDefaultDirectives: true,
-        directives: {
-          "script-src": "'self' 'unsafe-inline'",
-          "style-src": "'self' 'unsafe-inline'",
-        }
-      }
-    },
+    `gatsby-plugin-dark-mode`,
   ],
 }

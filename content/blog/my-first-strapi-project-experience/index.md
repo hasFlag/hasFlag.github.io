@@ -1,7 +1,6 @@
 ---
 title: My first Strapi project experience
 date: "2021-02-25T22:40:32.169Z"
-featured: ./featured.jpg
 ---
 ![strapi](./strapi.jpeg)
 

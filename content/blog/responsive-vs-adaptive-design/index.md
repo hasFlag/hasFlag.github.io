@@ -1,7 +1,6 @@
 ---
 title: Responsive vs. Adaptive design
 date: "2020-09-06T23:46:37.121Z"
-featured: ./featured.jpg
 ---
 ![featured.image](./featured-image.jpeg)
 

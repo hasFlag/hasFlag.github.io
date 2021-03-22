@@ -1,77 +1,46 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const BlogIndex = ({ data, location }) => {
+const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <SEO title="All posts" />
-        <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
-
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO title="Gurpreet Singh" />
       <Bio />
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const image = getImage(post.frontmatter.featured)
-          const title = post.frontmatter.title || post.fields.slug
+      <section className="segment">
+        <div>
+          <h2>Latest Posts</h2>
+          <Link to="/blog">All posts</Link>
+        </div>
+        <div>
+          <ol style={{ listStyle: `none` }}>
+            {posts.slice(0, 5).map(post => {
+              const title = post.frontmatter.title || post.fields.slug
 
-          return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <div className="post-img-wrapper">
-                  <GatsbyImage image={image} alt={post.frontmatter.date} />
-                </div>
-                <div className="post-content">
-                  <header>
-                    <h2>
-                      <Link to={post.fields.slug} itemProp="url">
-                        <span itemProp="headline">{title}</span>
-                      </Link>
-                    </h2>
-                    <small itemProp="datePublished">{post.frontmatter.date}</small>
-                    <small><span aria-hidden="true"> ⏱ </span>{post.fields.readingTime.text}</small>
-                  </header>
-                  <section>
-                    <p
-                      dangerouslySetInnerHTML={{
-                        __html: post.frontmatter.description || post.excerpt,
-                      }}
-                      itemProp="description"
-                    />
-                  </section>
-                </div>
-              </article>
-            </li>
-          )
-        })}
-      </ol>
+              return (
+                <li key={post.fields.slug} itemScope
+                  itemType="http://schema.org/Article">
+                  <Link to={post.fields.slug} itemProp="url">
+                    <span itemProp="headline">{title}</span>
+                  </Link>
+                  <p><time itemProp="datePublished">{post.frontmatter.date}</time><small><span aria-hidden="true"> - ⏱ </span>{post.fields.readingTime.text}</small></p>
+                </li>
+              )
+            })}
+          </ol>
+        </div>
+      </section>
     </Layout>
   )
 }
 
-export default BlogIndex
+export default Index
 
 export const pageQuery = graphql`
   query {
@@ -93,12 +62,6 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
-          featured {
-            id,
-            childImageSharp {
-              gatsbyImageData(width: 300)
-            }
-          }
         }
       }
     }

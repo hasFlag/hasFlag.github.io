@@ -1,11 +1,16 @@
 import * as React from "react"
-import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import { Link } from "gatsby"
+import ToggleMode from "./toggleMode"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
+
+  const isActive = (slug) => {
+    var re = new RegExp(slug, 'gi')
+    return re.test(location.pathname) ? "active" : ""
+  }
 
   if (isRootPath) {
     header = (
@@ -15,7 +20,7 @@ const Layout = ({ location, title, children }) => {
     )
   } else {
     header = (
-      <Link className="header-link-home" to="/">
+      <Link className="header-link-home" to="/" aria-label="Spread Knowledge">
         {title}
       </Link>
     )
@@ -24,38 +29,33 @@ const Layout = ({ location, title, children }) => {
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">
-        {header}
-        <ThemeToggler>
-          {({ theme, toggleTheme }) => (
-            <span className="toggle-theme-wrapper">
-              <label htmlFor="themeToggler">
-                <input
-                  id="themeToggler"
-                  aria-label="Switch between Dark and Light mode"
-                  type="checkbox"
-                  onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
-                  checked={theme === 'dark'}
-                />{' '}
-                Dark mode
-              </label>
-            </span>
-          )}
-        </ThemeToggler>
+        <div>
+          {header}
+          <ToggleMode />
+        </div>
+        <div>
+          <nav>
+            <Link to="/blog" className={isActive('blog')}>Blog</Link>
+            <Link to="/about" className={isActive('about')}>About</Link>
+          </nav>
+          <nav>
+            <a href="https://twitter.com/gsin11">Twitter</a>
+            <a href="https://www.linkedin.com/in/gsin11/">Linkedin</a>
+            <a href="https://github.com/gsin11">GitHub</a>
+          </nav>
+        </div>
       </header>
       <main>{children}</main>
       <footer>
         <ul>
           <li>
-            <a href="https://twitter.com/gsin11">twitter</a>
+            <a href="https://twitter.com/gsin11">Twitter</a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/gsin11/">linkedin</a>
+            <a href="https://www.linkedin.com/in/gsin11/">Linkedin</a>
           </li>
           <li>
-            <a href="https://github.com/gsin11">github</a>
-          </li>
-          <li>
-            <a href="https://stackoverflow.com/users/2439056/gurpreet-singh">stack overflow</a>
+            <a href="https://github.com/gsin11">GitHub</a>
           </li>
           <li>
             <a href="/rss.xml">rss</a>

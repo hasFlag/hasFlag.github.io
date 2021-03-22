@@ -6,50 +6,15 @@
  */
 
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 const Bio = () => {
-  const data = useStaticQuery(graphql`
-    query BioQuery {
-      site {
-        siteMetadata {
-          author {
-            name
-            summary
-          }
-          social {
-            twitter
-          }
-        }
-      }
-    }
-  `)
-
-  // Set these values by editing "siteMetadata" in gatsby-config.js
-  const author = data.site.siteMetadata?.author
-  const social = data.site.siteMetadata?.social
-
   return (
-    <div className="bio">
-      <StaticImage
-        className="bio-avatar"
-        layout="fixed"
-        formats={["AUTO", "WEBP", "AVIF"]}
-        src="../images/profile-pic.jpg"
-        width={50}
-        height={50}
-        quality={95}
-        alt="Profile picture"
-      />
-      {author?.name && (
-        <p>
-          I am <strong><a href={`https://twitter.com/${social?.twitter || ``}`} aria-label={`click to visit ${author.name}'s twitter profile`}>{author.name}</a></strong> 👨🏻‍💻
-          <br />
-          {author?.summary || null}.
-        </p>
-      )}
-    </div>
+    <section className="segment">
+      <h2>Hi <span role="img" aria-label="waving hand">👋</span></h2>
+      <p>I'm Gurpreet Singh - I am a Front End Architect from India <span aria-hidden="true">🇮🇳</span> now living in Frankfurt <span aria-hidden="true">🇩🇪</span></p>
+      <p>I have more than 10 years of experience in the area of JavaScript, HTML5, CSS3. My expertise are to work on full stack-based projects using NodeJS and ReactJS.</p>
+      <p>I love to capture landscapes, long exposures, and portraits as a hobby photographer.</p>
+    </section>
   )
 }
 

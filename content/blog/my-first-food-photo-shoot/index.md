@@ -1,7 +1,6 @@
 ---
 title: My First Food Photo Shoot
 date: "2016-08-26T22:40:32.169Z"
-featured: ./featured.jpg
 ---
 
 I would like to share with you my DIY (Do It Yourself) kind of food photography session for one of the famous restaurants based out of Gurugram (India).

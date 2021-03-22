@@ -1,7 +1,6 @@
 ---
 title: Can we use Google services without compromising privacy?
 date: "2021-02-24T22:40:32.169Z"
-featured: ./featured.jpg
 ---
 
 ![Google vs Tor](./google-vs-tor.jpeg)

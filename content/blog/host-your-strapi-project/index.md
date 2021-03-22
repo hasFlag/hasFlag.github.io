@@ -1,7 +1,6 @@
 ---
 title: Host your Strapi project
 date: "2021-02-26T22:40:32.169Z"
-featured: ./featured.jpg
 ---
 
 In this article, I will walk you through the Strapi CMS setup on your local machine followed by deploying it to Heroku.
