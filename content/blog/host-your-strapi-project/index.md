@@ -97,17 +97,17 @@ $ heroku login
 
 Create a new Heroku project
 ```sh
-$ heroku create heroku_app_name
+$ heroku create heroku-app-name
 ```
 
 Add the Heroku Postgres [add-on](https://elements.heroku.com/addons/heroku-postgresql):
 ```sh
-$ heroku addons:create heroku-postgresql:hobby-dev 
+$ heroku addons:create heroku-postgresql:hobby-dev --app heroku-app-name
 ```
 > You can check your Postgres configurations by triggering the following command.
 
 ```sh
-$ heroku config
+$ heroku config --app heroku-app-name
 # you will get a similar kind of string
 DATABASE_URL:  postgres://<username>:<password>@<hostname>:<port>/<database_name>
 ```
@@ -117,6 +117,10 @@ You don't have to worry to get these parameters since `pg-connection-string` wil
 ## Time to Deploy 🤞
 Deploy the project:
 ```sh
+#connect heroku git repo
+$ git init
+$ git remote add heroku https://git.heroku.com/your-app-name.git
+
 # add all your local changes to git
 $ git add .
 
