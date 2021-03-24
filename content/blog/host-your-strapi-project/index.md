@@ -108,6 +108,7 @@ $ heroku addons:create heroku-postgresql:hobby-dev --app heroku-app-name
 
 ```sh
 $ heroku config --app heroku-app-name
+
 # you will get a similar kind of string
 DATABASE_URL:  postgres://<username>:<password>@<hostname>:<port>/<database_name>
 ```
@@ -117,8 +118,8 @@ You don't have to worry to get these parameters since `pg-connection-string` wil
 ## Time to Deploy 🤞
 Deploy the project:
 ```sh
-#connect heroku git repo
-$ git init
+# connect heroku git repo
+$ git init  # in if your directory is not git enabled
 $ git remote add heroku https://git.heroku.com/your-app-name.git
 
 # add all your local changes to git
