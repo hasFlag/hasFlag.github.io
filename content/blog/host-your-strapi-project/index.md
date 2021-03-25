@@ -25,7 +25,7 @@ now you have a database setup on your local machine you are all set to install S
 
 ### Create Strapi project
 Create strapi project by using the following commands:
-```sh
+```bash
 # Using yarn
 $ yarn create strapi-app app
 
@@ -48,7 +48,7 @@ You will find the local database configuration here: `./config/database.js`. Now
 Copy your `./config/database.js` file and put it into `./config/env/production/database.js`.
 
 Now we have two `database.js` files. Please do the following changes to the `./config/env/production/database.js` file.
-```sh
+```bash
 # you can now install the package to parse the database configs
 $ npm i pg-connection-string
 ```
@@ -85,28 +85,28 @@ In this `database.js` file we are accessing the `process.env` variable which wil
 This process of keeping configurations is secure since no one can see these values outside the Heroku logged user.
 
 I believe you have Heroku already installed on your local if not you can follow the below commands:
-```sh
+```bash
 $ brew tap heroku/brew && brew install heroku
 ```
 Or go to [Heroku](https://devcenter.heroku.com/articles/heroku-cli#download-and-install) for instructions specific to your OS.
 
 Once you have Heroku install, you can log in.
-```sh
+```bash
 $ heroku login
 ```
 
 Create a new Heroku project
-```sh
+```bash
 $ heroku create heroku-app-name
 ```
 
 Add the Heroku Postgres [add-on](https://elements.heroku.com/addons/heroku-postgresql):
-```sh
+```bash
 $ heroku addons:create heroku-postgresql:hobby-dev --app heroku-app-name
 ```
 > You can check your Postgres configurations by triggering the following command.
 
-```sh
+```bash
 $ heroku config --app heroku-app-name
 
 # you will get a similar kind of string
@@ -117,7 +117,7 @@ You don't have to worry to get these parameters since `pg-connection-string` wil
 
 ## Time to Deploy 🤞
 Deploy the project:
-```sh
+```bash
 # connect heroku git repo
 $ git init  # in if your directory is not git enabled
 $ git remote add heroku https://git.heroku.com/your-app-name.git

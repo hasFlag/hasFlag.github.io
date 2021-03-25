@@ -34,7 +34,7 @@ After having the above structure in place, it's time to configure `npm` by trigg
 
 ## <a name="install-packages"></a> Install packages
 Please install following packages with node commands.
-```cmd
+```bash
 $ npm i bcrypt ejs express express-flash express-session passport passport-local
 
 $ npm --save-dev i dotenv nodemon
@@ -211,11 +211,11 @@ module.exports = init
 ```
 
 ## <a name="local-env-file-setup"></a> Local env file setup
-```cmd
+```bash
 SESSION_SECRET=<some random string>
 ```
 > These secret keys shouldn't be visible to others, so please put this in the `.gitignore` file.
-```cmd
+```bash
 node_modules
 .env
 ```
