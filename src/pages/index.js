@@ -5,9 +5,12 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+const Posts = React.lazy(() => import('../components/posts'));
+
 const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
+  const isSSR = typeof window === "undefined"
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -19,21 +22,11 @@ const Index = ({ data, location }) => {
           <Link to="/blog">All posts</Link>
         </div>
         <div>
-          <ol style={{ listStyle: `none` }}>
-            {posts.slice(0, 5).map(post => {
-              const title = post.frontmatter.title || post.fields.slug
-
-              return (
-                <li key={post.fields.slug} itemScope
-                  itemType="http://schema.org/Article">
-                  <Link to={post.fields.slug} itemProp="url">
-                    <span itemProp="headline">{title}</span>
-                  </Link>
-                  <p><time itemProp="datePublished">{post.frontmatter.date}</time>{" - "}<small>{post.fields.readingTime.text}</small></p>
-                </li>
-              )
-            })}
-          </ol>
+          {!isSSR &&
+            <React.Suspense fallback={<div>Loading...</div>}>
+              <Posts isHomepage posts={posts} limit={5} />
+            </React.Suspense>
+          }
         </div>
       </section>
     </Layout>
@@ -61,6 +54,7 @@ export const pageQuery = graphql`
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           title
+          tags
           description
         }
       }
