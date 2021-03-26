@@ -27,7 +27,7 @@ const BlogPostTemplate = ({ data, location }) => {
           {" - "}
           <small>
             {tags.map((tag, index) => {
-              return <Link key={`tag_${index}`} to={`/tags/${tag}`}>{(index ? ', ' : '') + tag}</Link>
+              return <>{(index ? ', ' : '')}<Link key={`tag_${index}`} to={`/tags/${tag}`} title={`click to visit ${tag} tag`}>{tag}</Link></>
             })}
           </small>
           {" - "}

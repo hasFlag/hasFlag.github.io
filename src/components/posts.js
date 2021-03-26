@@ -29,7 +29,7 @@ const Posts = ({ posts, isHomepage, limit }) => {
                 <small>
                   {" - "}
                   {post.frontmatter.tags.map((tag, index) => {
-                    return <Link key={`tag_${index}`} to={`/tags/${tag}`}>{(index ? ', ' : '') + tag}</Link>
+                    return <>{(index ? ', ' : '')}<Link key={`tag_${index}`} to={`/tags/${tag}`} title={`click to visit ${tag} tag`}>{tag}</Link></>
                   })}
                   {" - "}
                   {post.fields.readingTime.text}
