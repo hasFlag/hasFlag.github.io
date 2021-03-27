@@ -6,10 +6,10 @@ tags: ["accessibility", "tutorials", "html"]
 ![why we need aria](./post_pic.jpg)
 
 
-I am reading a lot about accessibility guidelines and met/working with some people who are responsible to deliver accessible experiences. Accessibility is something which you can't just archive by adding `aria` attributes to your <abbr title="Document Object Model">DOM</abbr> elements. After all there is no need to add `aria` attribute if you are use correct DOM element while building your website.
+I am reading a lot about accessibility guidelines and met/working with some people who are responsible to deliver accessible experiences. Accessibility is something which you can't just archive by adding `aria` attributes to your <abbr title="Document Object Model">DOM</abbr> elements. After all, there is no need to add the `aria` attribute if you are using the correct DOM element while building your website.
 
 ## (Mis)use of aria-* attributes
-Web developers often treat accessibility as last check in their component development life cycle and at the end when they test their component in screen readers they found some unexpected behaviors. In order to fix these problems they start adding `aria` attributes to their DOM elements which makes the entire DOM structure heavier and confusing.
+Web developers often treat accessibility as the last check-in of their component development life cycle. When they test their component in screen readers, they found some unexpected behaviors. To fix these problems they start adding `aria` attributes to their DOM elements which make the entire DOM structure heavier and confusing.
 
 For example, what tag would you prefer to use to define your button?
 
@@ -24,11 +24,11 @@ or
 <div tabindex="0" role="button" aria-pressed="false">My button<div>
 ```
 
-In above code you are not only creating button with `div` tag but also adding JavaScript overhead to keep track of `aria-pressed` in order to announce the correct state of button.
+In the above code, you are creating a button with a `div` tag and adding JavaScript overhead to keep track of `aria-pressed` to announce the correct state of the button.
 
-You got it right, first step to achieve accessibility is your DOM structure. By using semantic HTML tags you can directly inform the screen readers to read what they suppose to read. I have also seen developers who are adding `aria-label` to their link tags, which leads screen readers to read the same text twice.
+You got it right, the first step to achieving accessibility is your DOM structure. Using semantic HTML tags, you can directly inform the screen readers to read what they are supposed to read. I have also seen developers who are adding `aria-label` to their link tags, which leads screen readers to read the same text twice.
 
-Following are some semantic HTML attributes which behaves the way they are defined and you don't need any extra support for aria tags.
+Following are some semantic HTML attributes that behave the way they are defined and you don't need any extra support for aria tags.
 
 ## Examples
 ```html
@@ -69,7 +69,7 @@ Good Practice ✅
 <label for="chk1-label">Remember my preferences</label>
 ```
 
-It is still debatable when it comes to accessibility, there is no wrong/right but there is a balance which you need to maintain in order to give better experience to wide range of  users.
+It is still debatable when it comes to accessibility, there is no wrong/right but there is a balance which you need to maintain to give a better experience to a wide range of users.
 
 ## Tips
 - Keep your DOM elements semantic
