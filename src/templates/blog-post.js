@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  const postSrc = `${data.site.siteMetadata.postSrc}${post.fields.slug}index.md`
   const { previous, next } = data
   const { title, description, date, tags } = post.frontmatter
 
@@ -32,6 +33,7 @@ const BlogPostTemplate = ({ data, location }) => {
           </small>
           {" - "}
           <small>{post.fields.readingTime.text}</small>
+          <small>{" - "}<a href={postSrc}>edit post</a></small>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -80,6 +82,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        postSrc
       }
     }
     markdownRemark(id: { eq: $id }) {
@@ -87,6 +90,7 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 160)
       html
       fields {
+        slug
         readingTime {
           text
         }
