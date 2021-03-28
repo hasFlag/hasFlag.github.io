@@ -117,7 +117,7 @@ module.exports = {
         short_name: `GS`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#e63946`,
+        theme_color: `#9e9e9e`,
         display: `minimal-ui`,
         icon: `src/images/fav-icon.png`, // This path is relative to the root of the site.
       },
