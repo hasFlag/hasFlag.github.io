@@ -29,6 +29,7 @@ const Layout = ({ location, title, children }) => {
             <a href="https://twitter.com/gsin11">Twitter</a>
             <a href="https://www.linkedin.com/in/gsin11/">Linkedin</a>
             <a href="https://github.com/gsin11">GitHub</a>
+            <a href="https://www.buymeacoffee.com/gsin" target="blank"><strong>Buy me a <span role="img" aria-label="coffee">☕️</span></strong></a>
           </nav>
         </div>
       </header>
