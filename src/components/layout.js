@@ -26,10 +26,10 @@ const Layout = ({ location, title, children }) => {
             <Link to="/about" className={isActive('about')}>About</Link>
           </nav>
           <nav>
-            <a href="https://twitter.com/gsin11">Twitter</a>
-            <a href="https://www.linkedin.com/in/gsin11/">Linkedin</a>
-            <a href="https://github.com/gsin11">GitHub</a>
-            <a href="https://www.buymeacoffee.com/gsin" target="blank"><strong>Buy me a <span role="img" aria-label="coffee">☕️</span></strong></a>
+            <a href="https://twitter.com/gsin11" rel="noreferrer">Twitter</a>
+            <a href="https://www.linkedin.com/in/gsin11/" rel="noreferrer">Linkedin</a>
+            <a href="https://github.com/gsin11" rel="noreferrer">GitHub</a>
+            <a href="https://www.buymeacoffee.com/gsin" target="blank" rel="noreferrer"><strong>Buy me a <span role="img" aria-label="coffee">☕️</span></strong></a>
           </nav>
         </div>
       </header>

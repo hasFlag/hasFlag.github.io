@@ -6,6 +6,19 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const Posts = React.lazy(() => import('../components/posts'));
+const Projects = React.lazy(() => import('../components/projects'));
+
+const PROJECTS = [
+  {
+    id: 1,
+    label: 'Github Jobs',
+    link: 'https://github-jobs-peach.vercel.app/',
+  }, {
+    id: 2,
+    label: 'TailwindCSS Components',
+    link: 'https://react-tailwindcss-components.vercel.app/',
+  }
+]
 
 const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -25,6 +38,18 @@ const Index = ({ data, location }) => {
           {!isSSR &&
             <React.Suspense fallback={<div>Loading...</div>}>
               <Posts isHomepage posts={posts} limit={5} />
+            </React.Suspense>
+          }
+        </div>
+      </section>
+      <section className="segment">
+        <div className="has-border">
+          <h2>Latest Projects</h2>
+        </div>
+        <div>
+          {!isSSR &&
+            <React.Suspense fallback={<div>Loading...</div>}>
+              <Projects projects={PROJECTS} />
             </React.Suspense>
           }
         </div>
