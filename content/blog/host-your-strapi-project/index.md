@@ -17,6 +17,7 @@ If you want to use Heroko as a deployment server then I would suggest you choose
 ### Local Postgre database setup
 
 ```sql
+$ psql
 $ CREATE DATABASE strapi_db;
 $ CREATE USER your_user_name WITH PASSWORD 'strong_password';
 $ GRANT ALL PRIVILEGES ON DATABASE strapi_db TO your_user_name;
