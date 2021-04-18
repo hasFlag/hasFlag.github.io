@@ -1,4 +1,5 @@
 import * as React from "react"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 const Projects = ({ projects }) => {
   return <ol style={{ listStyle: `none` }}>
@@ -9,9 +10,9 @@ const Projects = ({ projects }) => {
             className="post-list-item"
           >
             <header>
-              <a href={project.link} target="_blank" className="external" rel="noreferrer">
+              <OutboundLink href={project.link} target="_blank" className="external">
                 <span>{project.label}</span>
-              </a>
+              </OutboundLink>
             </header>
           </article>
         </li>
