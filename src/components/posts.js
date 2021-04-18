@@ -1,6 +1,8 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
+import trackEvent from './gtag'
+
 const Posts = ({ posts, isHomepage, limit }) => {
   const noOfPosts = limit || posts.length;
 
@@ -16,11 +18,11 @@ const Posts = ({ posts, isHomepage, limit }) => {
             itemType="http://schema.org/Article"
           >
             <header>
-              {isHomepage && <Link to={post.fields.slug} itemProp="url">
+              {isHomepage && <Link to={post.fields.slug} itemProp="url" onClick={(e) => trackEvent(e)}>
                 <span itemProp="headline">{title}</span>
               </Link>}
               {!isHomepage && <h2>
-                <Link to={post.fields.slug} itemProp="url">
+                <Link to={post.fields.slug} itemProp="url" onClick={(e) => trackEvent(e)}>
                   <span itemProp="headline">{title}</span>
                 </Link>
               </h2>}

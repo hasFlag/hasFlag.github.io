@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 import ToggleMode from "./toggleMode"
 
 const Layout = ({ location, title, children }) => {
@@ -26,10 +27,10 @@ const Layout = ({ location, title, children }) => {
             <Link to="/about" className={isActive('about')}>About</Link>
           </nav>
           <nav>
-            <a href="https://twitter.com/gsin11" rel="noreferrer">Twitter</a>
-            <a href="https://www.linkedin.com/in/gsin11/" rel="noreferrer">Linkedin</a>
-            <a href="https://github.com/gsin11" rel="noreferrer">GitHub</a>
-            <a href="https://www.buymeacoffee.com/gsin" target="blank" rel="noreferrer"><strong>Buy me a <span role="img" aria-label="coffee">☕️</span></strong></a>
+            <OutboundLink href="https://twitter.com/gsin11">Twitter</OutboundLink>
+            <OutboundLink href="https://www.linkedin.com/in/gsin11/">Linkedin</OutboundLink>
+            <OutboundLink href="https://github.com/gsin11">GitHub</OutboundLink>
+            <OutboundLink href="https://www.buymeacoffee.com/gsin" target="blank"><strong>Buy me a <span role="img" aria-label="coffee">☕️</span></strong></OutboundLink>
           </nav>
         </div>
       </header>
@@ -37,13 +38,13 @@ const Layout = ({ location, title, children }) => {
       <footer>
         <ul>
           <li>
-            <a href="https://twitter.com/gsin11">Twitter</a>
+            <OutboundLink href="https://twitter.com/gsin11">Twitter</OutboundLink>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/gsin11/">Linkedin</a>
+            <OutboundLink href="https://www.linkedin.com/in/gsin11/">Linkedin</OutboundLink>
           </li>
           <li>
-            <a href="https://github.com/gsin11">GitHub</a>
+            <OutboundLink href="https://github.com/gsin11">GitHub</OutboundLink>
           </li>
           <li>
             <a href="/rss.xml">rss</a>
