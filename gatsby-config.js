@@ -128,5 +128,12 @@ module.exports = {
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-minify`,
     `gatsby-plugin-dark-mode`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "G-LBFCMQXE49",
+        head: true,
+      },
+    },
   ],
 }
