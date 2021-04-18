@@ -106,6 +106,10 @@ body.dark {
   transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
 }
 
+.relative {
+  position: relative;
+}
+
 footer {
   padding: var(--spacing-6) var(--spacing-0);
   text-align: center;
@@ -518,6 +522,24 @@ a.active {
 
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
+}
+
+.waving-hand {
+  animation-duration: 1s;
+  left: var(--spacing-2);
+  position: absolute;
+  animation-iteration-count: infinite;
+  animation-name: waving;
+}
+
+@keyframes waving {
+  0% { transform: rotate(0deg) }
+  20% { transform: rotate(12deg) }
+  40% { transform: rotate(24deg) }
+  60% { transform: rotate(36deg) }
+  80% { transform: rotate(24deg) }
+  90% { transform: rotate(12deg) }
+  100% { transform: rotate(0deg) }
 }
 
 /* Media queries */

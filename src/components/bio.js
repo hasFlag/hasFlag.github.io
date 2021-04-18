@@ -10,7 +10,7 @@ import * as React from "react"
 const Bio = () => {
   return (
     <section className="segment">
-      <h2>Hi <span role="img" aria-label="waving hand">👋</span></h2>
+      <h2>Hi <span className="relative"><span role="img" className="waving-hand" aria-label="waving hand">👋</span></span></h2>
       <p>I'm Gurpreet Singh - I am a Front End Architect from India <span aria-hidden="true">🇮🇳</span> now living in Frankfurt <span aria-hidden="true">🇩🇪</span></p>
       <p>I have more than 10 years of experience in the area of JavaScript, HTML, CSS. My expertise are to work on full stack projects using NodeJS and ReactJS.</p>
       <p>I love to capture landscapes, long exposures, and portraits as a hobby photographer.</p>
