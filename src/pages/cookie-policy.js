@@ -12,7 +12,7 @@ const CookiePolicy = ({ data, location }) => {
       <SEO title="Cookie Policy" />
       <h1>Cookie Policy for gsin.in</h1>
 
-      <p>This is the Cookie Policy for gsin.in, accessible from https://gsin.in</p>
+      <p>This is the Cookie Policy for gsin.in, accessible from https://gsin.in/cookie-policy</p>
 
       <p><strong>What Are Cookies</strong></p>
 
