@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import CookieBanner from "../components/cookieBanner"
 
 // Components
 import { Link, graphql } from "gatsby"
@@ -11,29 +12,32 @@ const Tags = ({ pageContext, data, location }) => {
   const { edges } = data.allMarkdownRemark
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title={tag} />
-      <section className="segment">
-        <div>
-          <h2>{tag}</h2>
-          <Link to="/tags">All tags</Link>
-        </div>
-        <div>
-          <ol style={{ listStyle: `none` }}>
-            {edges.map(({ node }) => {
-              const { slug } = node.fields
-              const { title, date } = node.frontmatter
-              return (
-                <li key={slug}>
-                  <Link to={slug}>{title}</Link>
-                  <p><time>{date}</time></p>
-                </li>
-              )
-            })}
-          </ol>
-        </div>
-      </section>
-    </Layout>
+    <>
+      <Layout location={location} title={siteTitle}>
+        <SEO title={tag} />
+        <section className="segment">
+          <div>
+            <h2>{tag}</h2>
+            <Link to="/tags">All tags</Link>
+          </div>
+          <div>
+            <ol style={{ listStyle: `none` }}>
+              {edges.map(({ node }) => {
+                const { slug } = node.fields
+                const { title, date } = node.frontmatter
+                return (
+                  <li key={slug}>
+                    <Link to={slug}>{title}</Link>
+                    <p><time>{date}</time></p>
+                  </li>
+                )
+              })}
+            </ol>
+          </div>
+        </section>
+      </Layout>
+      <CookieBanner />
+    </>
   )
 }
 

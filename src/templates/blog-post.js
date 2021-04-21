@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import CookieBanner from "../components/cookieBanner"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -12,64 +13,67 @@ const BlogPostTemplate = ({ data, location }) => {
   const { title, description, date, tags, featured, } = post.frontmatter
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO
-        title={title}
-        description={description || post.excerpt}
-        ogType='article'
-        ogImage={featured.childImageSharp?.fluid?.src}
-      />
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
-        <header>
-          <h1 itemProp="headline">{title}</h1>
-          <time itemProp="datePublished">{date}</time>
-          {" - "}
-          <small>
-            {tags.map((tag, index) => {
-              return <>{(index ? ', ' : '')}<Link key={`tag_${index}`} to={`/tags/${tag}`} title={`click to visit ${tag} tag`}>{tag}</Link></>
-            })}
-          </small>
-          {" - "}
-          <small>{post.fields.readingTime.text}</small>
-          <small>{" - "}<a href={postSrc}>edit post</a></small>
-        </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
+    <>
+      <Layout location={location} title={siteTitle}>
+        <SEO
+          title={title}
+          description={description || post.excerpt}
+          ogType='article'
+          ogImage={featured.childImageSharp?.fluid?.src}
         />
-        <hr />
-      </article>
-      <nav className="blog-post-nav">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
+        <article
+          className="blog-post"
+          itemScope
+          itemType="http://schema.org/Article"
         >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
-    </Layout>
+          <header>
+            <h1 itemProp="headline">{title}</h1>
+            <time itemProp="datePublished">{date}</time>
+            {" - "}
+            <small>
+              {tags.map((tag, index) => {
+                return <>{(index ? ', ' : '')}<Link key={`tag_${index}`} to={`/tags/${tag}`} title={`click to visit ${tag} tag`}>{tag}</Link></>
+              })}
+            </small>
+            {" - "}
+            <small>{post.fields.readingTime.text}</small>
+            <small>{" - "}<a href={postSrc}>edit post</a></small>
+          </header>
+          <section
+            dangerouslySetInnerHTML={{ __html: post.html }}
+            itemProp="articleBody"
+          />
+          <hr />
+        </article>
+        <nav className="blog-post-nav">
+          <ul
+            style={{
+              display: `flex`,
+              flexWrap: `wrap`,
+              justifyContent: `space-between`,
+              listStyle: `none`,
+              padding: 0,
+            }}
+          >
+            <li>
+              {previous && (
+                <Link to={previous.fields.slug} rel="prev">
+                  ← {previous.frontmatter.title}
+                </Link>
+              )}
+            </li>
+            <li>
+              {next && (
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+              )}
+            </li>
+          </ul>
+        </nav>
+      </Layout>
+      <CookieBanner />
+    </>
   )
 }
 
