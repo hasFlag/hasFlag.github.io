@@ -2,6 +2,7 @@
 title: Are you logging your NodeJS code?
 date: "2021-01-16T22:40:32.169Z"
 tags: ["nodejs", "tutorials", "javascript"]
+featured: ./logging.jpg
 ---
 
 ![Logger](./logging.jpg)

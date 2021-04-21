@@ -2,6 +2,7 @@
 title: Delicious Risotto Tomaten
 date: "2021-03-17T22:40:32.169Z"
 tags: ["recipe", "tutorials"]
+featured: ./final-recipe.jpg
 ---
 After eating countless risotto from several restaurants I thought to cook my own version. You generally eat *risotto ai funghi* but this my version has tomatoes in it. Let's start cooking.
 

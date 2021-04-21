@@ -2,6 +2,7 @@
 title: Aria is not my thing 🚫
 date: "2021-03-27T22:40:32.169Z"
 tags: ["accessibility", "tutorials", "html"]
+featured: ./post_pic.jpg
 ---
 ![why we need aria](./post_pic.jpg)
 

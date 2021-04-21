@@ -2,6 +2,7 @@
 title: Motion Blur Photography
 date: "2020-11-28T22:12:03.284Z"
 tags: ["photography", "tutorials"]
+featured: ./motion-photo.jpeg
 ---
 ![Motion Photo](./motion-photo.jpeg)
 

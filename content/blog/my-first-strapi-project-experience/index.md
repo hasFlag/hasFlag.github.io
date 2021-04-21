@@ -2,6 +2,7 @@
 title: My first Strapi project experience
 date: "2021-02-25T22:40:32.169Z"
 tags: ["nodejs", "tutorials", "strapi"]
+featured: ./strapi.jpeg
 ---
 ![strapi](./strapi.jpeg)
 

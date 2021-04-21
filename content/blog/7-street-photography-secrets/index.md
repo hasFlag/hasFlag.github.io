@@ -2,6 +2,7 @@
 title: 7 Street Photography Secrets
 date: "2020-10-10T22:40:32.169Z"
 tags: ["photography", "tutorials"]
+featured: ./old-lady.jpeg
 ---
 It is not easy to become a street photographer since every object is moving. Nevertheless, you still have a powerful weapon in your hands that can shoot anything with patience and the right time.
 

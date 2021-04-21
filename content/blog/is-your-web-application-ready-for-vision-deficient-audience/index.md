@@ -2,6 +2,7 @@
 title: Is your Web Application ready for Vision Deficient audience?
 date: "2020-10-02T22:40:32.169Z"
 tags: ["accessibility", "tutorials"]
+featured: ./vision-deficiency.jpeg
 ---
 ![vision-deficiency](./vision-deficiency.jpeg)
 

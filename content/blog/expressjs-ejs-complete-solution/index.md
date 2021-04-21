@@ -2,6 +2,7 @@
 title: Express.js + EJS complete solution
 date: "2021-03-02T22:40:32.169Z"
 tags: ["javascript", "tutorials", "nodejs"]
+featured: ./expressjs+ejs.jpg
 ---
 ![express and ejs](./expressjs+ejs.jpg)
 

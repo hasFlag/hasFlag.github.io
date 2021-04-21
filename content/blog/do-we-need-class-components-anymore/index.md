@@ -2,6 +2,7 @@
 title: Do we really need class components anymore?
 date: "2021-04-21T22:40:32.169Z"
 tags: ["reactjs", "tutorials"]
+featured: ./do-we-need-class-components-anymore.jpg
 ---
 
 ![Do we need class components anymore?](./do-we-need-class-components-anymore.jpg)

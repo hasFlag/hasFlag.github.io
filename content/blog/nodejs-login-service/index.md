@@ -2,6 +2,7 @@
 title: Node.js Login Service (express.js + passport)
 date: "2021-03-19T22:40:32.169Z"
 tags: ["nodejs", "tutorials"]
+featured: ./expressjs-passport.jpg
 ---
 ![express.js + passport](./expressjs-passport.jpg)
 These days I often see developers struggle or invest too much time to create proper authorization modules in their Node.js based applications. With this detailed tutorial, you will be able to one time create your authorization module which can be used in any route or sub-route of your application.

@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const SEO = ({ description, lang, meta, title }) => {
+const SEO = ({ description, lang, meta, title, ogType = 'website', ogImage }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,6 +18,11 @@ const SEO = ({ description, lang, meta, title }) => {
           siteMetadata {
             title
             description
+            siteUrl
+            author {
+              name
+              summary
+            }
             social {
               twitter
             }
@@ -30,6 +35,8 @@ const SEO = ({ description, lang, meta, title }) => {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const ogSiteName = `${site.siteMetadata.author.name} - ${site.siteMetadata.author.summary}`
+  const ogUrl = site.siteMetadata.siteUrl
 
   return (
     <Helmet
@@ -53,7 +60,19 @@ const SEO = ({ description, lang, meta, title }) => {
         },
         {
           property: `og:type`,
-          content: `website`,
+          content: ogType,
+        },
+        {
+          property: `og:url`,
+          content: ogUrl,
+        },
+        {
+          property: `og:site_name`,
+          content: ogSiteName,
+        },
+        {
+          property: `og:image`,
+          content: ogUrl + ogImage,
         },
         {
           name: `twitter:card`,
@@ -61,15 +80,15 @@ const SEO = ({ description, lang, meta, title }) => {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.social?.twitter || ``,
+          content: `@${site.siteMetadata?.social?.twitter}` || ``,
         },
         {
           name: `twitter:title`,
           content: title,
         },
         {
-          name: `twitter:description`,
-          content: metaDescription,
+          name: `twitter:image`,
+          content: ogUrl + ogImage,
         },
         {
           name: `google-site-verification`,

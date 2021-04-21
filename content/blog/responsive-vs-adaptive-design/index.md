@@ -2,6 +2,7 @@
 title: Responsive vs. Adaptive design
 date: "2020-09-06T23:46:37.121Z"
 tags: ["responsive", "tutorials",]
+featured: ./featured-image.jpeg
 ---
 ![featured.image](./featured-image.jpeg)
 
