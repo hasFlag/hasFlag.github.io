@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import CookieBanner from "../components/cookieBanner"
 
 const Posts = React.lazy(() => import('../components/posts'));
 
@@ -25,22 +26,25 @@ const Blog = ({ data, location }) => {
   }
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
-      <section className="segment">
-        <div>
-          <h2>Blog</h2>
-          <Link to="/tags">All tags</Link>
-        </div>
-        <div>
-          {!isSSR &&
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <Posts posts={posts} />
-            </React.Suspense>
-          }
-        </div>
-      </section>
-    </Layout>
+    <>
+      <Layout location={location} title={siteTitle}>
+        <SEO title="All posts" />
+        <section className="segment">
+          <div>
+            <h2>Blog</h2>
+            <Link to="/tags">All tags</Link>
+          </div>
+          <div>
+            {!isSSR &&
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <Posts posts={posts} />
+              </React.Suspense>
+            }
+          </div>
+        </section>
+      </Layout>
+      <CookieBanner />
+    </>
   )
 }
 

@@ -47,6 +47,9 @@ const Layout = ({ location, title, children }) => {
             <OutboundLink href="https://github.com/gsin11">GitHub</OutboundLink>
           </li>
           <li>
+            <Link to="/cookie-policy">Cookie Policy</Link>
+          </li>
+          <li>
             <a href="/rss.xml">rss</a>
           </li>
         </ul>

@@ -6,6 +6,7 @@ import kebabCase from "lodash/kebabCase"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import CookieBanner from "../components/cookieBanner"
 
 const TagsPage = ({
   data: {
@@ -15,27 +16,30 @@ const TagsPage = ({
     },
   },
 }, location) => (
-  <Layout location={location} title={title}>
-    <SEO title="All tags" />
-    <div>
-      <section className="segment">
-        <div>
-          <h2>Tags</h2>
-        </div>
-      </section>
+  <>
+    <Layout location={location} title={title}>
+      <SEO title="All tags" />
       <div>
-        <ol style={{ listStyle: `none` }}>
-          {group.map(tag => (
-            <li key={tag.fieldValue}>
-              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                {tag.fieldValue} ({tag.totalCount})
+        <section className="segment">
+          <div>
+            <h2>Tags</h2>
+          </div>
+        </section>
+        <div>
+          <ol style={{ listStyle: `none` }}>
+            {group.map(tag => (
+              <li key={tag.fieldValue}>
+                <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                  {tag.fieldValue} ({tag.totalCount})
               </Link>
-            </li>
-          ))}
-        </ol>
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
-    </div>
-  </Layout>
+    </Layout>
+    <CookieBanner />
+  </>
 )
 
 export default TagsPage

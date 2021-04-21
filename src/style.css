@@ -62,6 +62,9 @@
   --color-heading-black: black;
   --color-bg: #fff;
   --color-theme-toggle: #000;
+
+  --cookie-text: rgb(94, 101, 194);
+  --cookie-bg: rgb(240, 237, 255);
 }
 
 /* HTML elements */
@@ -84,6 +87,7 @@ body {
   font-size: var(--fontSize-1);
   color: var(--color-text);
   background-color: var(--color-bg);
+  position: relative;
 
   -webkit-transition: background-color 0.5s ease, color 0.5s ease;
   -moz-transition: background-color 0.5s ease, color 0.5s ease;
@@ -99,6 +103,8 @@ body.dark {
   --color-heading-black: #fff;
   --color-bg: #1A202C;
   --color-theme-toggle: #FFC600;
+  --cookie-bg: rgb(103 103 104);
+  --cookie-text: #fff;
 
   -webkit-transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
   -moz-transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
@@ -542,6 +548,32 @@ a.active {
   100% { transform: rotate(0deg) }
 }
 
+.cookie-banner {
+  display: flex;
+  position: absolute;
+  background-color: var(--cookie-bg);
+  border-color: rgb(94, 101, 194);
+  border-radius: var(--spacing-2);
+  color: var(--cookie-text);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  margin: 1em;
+  padding: 1em;
+  justify-content: space-between;
+  flex-direction: column;
+  row-gap: var(--spacing-2);
+}
+
+.cookie-banner button {
+  cursor: pointer;
+}
+
+.cookie-banner button:first-child {
+  margin-right: var(--spacing-2);
+}
+
 /* Media queries */
 @media (min-width: 42rem) {
   .global-header > div:last-child {
@@ -551,6 +583,9 @@ a.active {
   }
   .global-header > div:last-child nav {
     margin-bottom: 0;
+  }
+  .cookie-banner {
+    flex-direction: row;
   }
 }
 @media (max-width: 42rem) {
