@@ -594,6 +594,9 @@ a.active {
   .cookie-banner {
     flex-direction: row;
   }
+  .cookie-banner span {
+    max-width: 70%;
+  }
 }
 @media (max-width: 42rem) {
   blockquote {

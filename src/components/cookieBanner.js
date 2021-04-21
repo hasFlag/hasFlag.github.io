@@ -26,7 +26,7 @@ const CookieBanner = () => {
 
   const [showBanner, setShowBanner] = useState(false)
   useEffect(() => {
-    if (getCookie("ga-disable-G-LBFCMQXE49") === "true" || getCookie("ga-accepted") === "true") {
+    if (getCookie("ga-accepted") === "true") {
       setShowBanner(false)
     } else {
       setShowBanner(true)
@@ -36,11 +36,15 @@ const CookieBanner = () => {
   function declineCookie() {
     document.cookie = "ga-disable-G-LBFCMQXE49=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/"
     window.disableStr = 1
+    const date = new Date()
+    const newDate = new Date(date.setDate(date.getDate() + 7))
+    document.cookie = `ga-accepted=true; expires=${newDate};path=/`
     setShowBanner(false)
   }
 
   function acceptCookie() {
-    document.cookie = "ga-accepted=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/"
+    document.cookie = `ga-accepted=true; expires=Thu, 31 Dec 1987 23:59:59 UTC;path=/`
+    document.cookie = "ga-disable-G-LBFCMQXE49=false; expires=Thu, 31 Dec 1987 23:59:59 UTC;path=/"
     setShowBanner(false)
   }
 
