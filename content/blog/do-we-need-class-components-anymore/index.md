@@ -7,10 +7,10 @@ featured: ./do-we-need-class-components-anymore.jpg
 
 ![Do we need class components anymore?](./do-we-need-class-components-anymore.jpg)
 
-ReactJS is a mature enough framework that becomes the first choice for developers. When ReactJS got launched with a strong concept of *class components*. The reason they were popular because of their life cycle methods. With the ease of these life cycle methods, you can trigger your custom event at the right time.
+ReactJS is a mature enough library that becomes the first choice for developers. When ReactJS got launched with a strong concept of *class components*. The reason they were popular because of their life cycle methods. With the ease of these life cycle methods, you can trigger your custom event at the right time.
 Back then, it was clear when you need any state in the component goes for *class* else *functional*.
 
-Modern react, the reason I call it modern because over the period of time React framework has changed a lot. You shouldn't go with the assumption of stateful vs. functional components. Yet, functional components can also be stateful components.
+Modern react, the reason I call it modern because over the period of time React library has changed a lot. You shouldn't go with the assumption of stateful vs. functional components. Yet, functional components can also be stateful components.
 
 Let's start with some examples and it will be clear to you why don't* need class components anymore.
 
@@ -84,7 +84,7 @@ const FunctionalComponent = () => {
 We can handle the entire component state with a single ReactJS hook. Not only this but we have some other useful hooks to work with.
 
 ## Lifecycle Methods
-Let's talk about React lifecycle methods now. These methods are the backbone of the ReactJS framework. I still can recall when someone asked me about these methods in one of the interviews. These methods were only part of `Class Component` before but now area available with Hooks.
+Let's talk about React lifecycle methods now. These methods are the backbone of the ReactJS. I still can recall when someone asked me about these methods in one of the interviews. These methods were only part of `Class Component` before but now area available with Hooks.
 
 ### On Mount (componentDidMount)
 
