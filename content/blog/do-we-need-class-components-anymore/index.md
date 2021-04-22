@@ -7,12 +7,12 @@ featured: ./do-we-need-class-components-anymore.jpg
 
 ![Do we need class components anymore?](./do-we-need-class-components-anymore.jpg)
 
-ReactJS is a mature enough library that becomes the first choice for developers. When ReactJS got launched with a strong concept of *class components*. The reason they were popular because of their life cycle methods. With the ease of these life cycle methods, you can trigger your custom event at the right time.
+ReactJS is a mature enough library that becomes the first choice for developers. When ReactJS got launched it had a strong concept of *class components*. The reason they were popular because of their life cycle methods. With the ease of these life cycle methods, you can trigger your custom event at the right time.
 Back then, it was clear when you need any state in the component goes for *class* else *functional*.
 
 Modern react, the reason I call it modern because over the period of time React library has changed a lot. You shouldn't go with the assumption of stateful vs. functional components. Yet, functional components can also be stateful components.
 
-Let's start with some examples and it will be clear to you why don't* need class components anymore.
+Let's start with some examples and it will be clear to you why you may not need class components anymore.
 
 ## Rendering JSX
 ```js
@@ -35,7 +35,7 @@ You can see in the above example, we are trying to render a single string which 
 ## Handling state
 When it comes to handling state in ReactJS, it is debatable which type of component to go with. For example, I am working on a legacy project with React 15.x.x then I would definitely go with the `class` component. Because it gives me ReactJS life cycle methods which help to handle component state.
 
-Since React 16.8 added `React Hooks`, now we can handle state within the functional components and a lot more.
+Since React 16.8 added support for **React Hooks**, now we can handle state within the functional components and a lot more.
 
 ```js
 /* State handling with class component */
@@ -84,7 +84,7 @@ const FunctionalComponent = () => {
 We can handle the entire component state with a single ReactJS hook. Not only this but we have some other useful hooks to work with.
 
 ## Lifecycle Methods
-Let's talk about React lifecycle methods now. These methods are the backbone of the ReactJS. I still can recall when someone asked me about these methods in one of the interviews. These methods were only part of `Class Component` before but now area available with Hooks.
+Let's talk about React lifecycle methods now. These methods are the backbone of the ReactJS. I still can recall when someone asked me about these methods in one of the interviews. These methods were only part of `React.Component` before but now area available with Hooks.
 
 ### On Mount (componentDidMount)
 
