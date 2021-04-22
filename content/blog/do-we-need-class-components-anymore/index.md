@@ -7,9 +7,10 @@ featured: ./do-we-need-class-components-anymore.jpg
 
 ![Do we need class components anymore?](./do-we-need-class-components-anymore.jpg)
 
-As we know ReactJS is now pretty mature and becoming the number one choice of front-end developers. Back in time when react js launched it came with a very strong concept of *class components*, the reason they were popular because of their life cycle methods which easily provide you several options to trigger your event at right time. It was clear when you need any state in the component goes for *class* else choose the *functional* way to declare your component.
+ReactJS is a mature enough framework that becomes the first choice for developers. When ReactJS got launched with a strong concept of *class components*. The reason they were popular because of their life cycle methods. With the ease of these life cycle methods, you can trigger your custom event at the right time.
+Back then, it was clear when you need any state in the component goes for *class* else *functional*.
 
-Modern react, the reason I call it modern because over the period of time React framework has changed a lot. Now you really can't go with the assumption of stateful vs. functional component, perhaps functional components can also be stateful components.
+Modern react, the reason I call it modern because over the period of time React framework has changed a lot. You shouldn't go with the assumption of stateful vs. functional components. Yet, functional components can also be stateful components.
 
 Let's start with some examples and it will be clear to you why don't* need class components anymore.
 
@@ -29,12 +30,12 @@ class ClassComponent extends Component {
   }
 }
 ```
-If you see in the above example, we are trying to render only a single string which is not a challenge in `FunctionalComponent` but when it comes to `ClassComponent` becomes complex. Why we need Component a class to extend from react library? Basically, here `Component` class is doing nothing but rendering out components with the `render()` function.
+You can see in the above example, we are trying to render a single string which is not a challenge in `FunctionalComponent`. But when it comes to `ClassComponent` becomes complex. Why we need Component a class to extend from the ReactJS library? Basically, the `Component` is doing nothing but rendering components with the `render()` function.
 
 ## Handling state
-When it comes to handling state in ReactJS, it is debatable which type of component to go with. If I am working on a legacy project with React 15.x.x then I would blindly choose the `class` component because it gives me react life cycle method and easy to handle my component state.
+When it comes to handling state in ReactJS, it is debatable which type of component to go with. For example, I am working on a legacy project with React 15.x.x then I would definitely go with the `class` component. Because it gives me ReactJS life cycle methods which help to handle component state.
 
-React 16.8 was launched with a major update to support `React Hooks`. These hooks were very easy to use and came with the freedom to handle states within functional components and a lot more.
+Since React 16.8 added `React Hooks`, now we can handle state within the functional components and a lot more.
 
 ```js
 /* State handling with class component */
@@ -80,10 +81,10 @@ const FunctionalComponent = () => {
 ```
 **That was easy, right?**
 
-We just need a single react hook and we can handle the entire state of the component within our function component. Not only this but we have some other useful hooks to work with.
+We can handle the entire component state with a single ReactJS hook. Not only this but we have some other useful hooks to work with.
 
 ## Lifecycle Methods
-Let's talk about React lifecycle methods now. These methods are the backbone of the ReactJS framework, I still can recall when someone asked me about these methods in one of the interviews. These methods were only part of `React.Component` but now easily available with React Hooks.
+Let's talk about React lifecycle methods now. These methods are the backbone of the ReactJS framework. I still can recall when someone asked me about these methods in one of the interviews. These methods were only part of `Class Component` before but now area available with Hooks.
 
 ### On Mount (componentDidMount)
 
@@ -127,10 +128,10 @@ const FunctionalComponent = () => {
 }
 ```
 
-You can see, how easy it was to call an API within a functional component which was never possible with the functional component.
+See, how easy it is to call an API within a functional component. Which was never possible with the functional component.
 
 ### On Unmounting (componentWillUnmount)
-There are some instances where you might need to clear your timers or de-allocate memory when the component is unmounted.
+In some instances, where you need to clear your timers and de-allocate memory on the unmount.
 ```js
 /* Class component */
 
@@ -181,9 +182,9 @@ const FunctionalComponent = () => {
 ```
 
 ## Conclusion
-There are use case areas where you might need class components, but I always try to use the functional components as much as I can.
+There are some areas where you still need class components. But I always try to use the functional components as much as I can.
 
-In the above examples, you have seen we can accomplish everything by using functional components, but again in case your current project is running on class base components don't worry there is no harm in that either. Perhaps, I would recommend using functional components in your further project development. There is no official announcement from the ReactJS team to deprecate class components yet.
+In the example above you have seen, we can gain everything by using the functional components. But in case your current project is running on class components, don't worry there is no harm to that. Perhaps, I would recommend using functional components in your further project development. There is no official announcement from the ReactJS team to deprecate class components.
 
 ## Useful links
 - [Introduction to Hooks](https://reactjs.org/docs/hooks-intro.html)
