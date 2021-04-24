@@ -50,6 +50,7 @@ const SEO = ({ description, lang, meta, title, ogType = 'website', ogImage }) =>
           name: `description`,
           content: metaDescription,
         },
+        /* Open Graph */
         {
           property: `og:title`,
           content: title,
@@ -67,6 +68,10 @@ const SEO = ({ description, lang, meta, title, ogType = 'website', ogImage }) =>
           content: ogUrl,
         },
         {
+          property: `og:author`,
+          content: site.siteMetadata.author.name,
+        },
+        {
           property: `og:site_name`,
           content: ogSiteName,
         },
@@ -74,9 +79,14 @@ const SEO = ({ description, lang, meta, title, ogType = 'website', ogImage }) =>
           property: `og:image`,
           content: ogUrl + ogImage,
         },
+        /* twitter */
         {
           name: `twitter:card`,
           content: `summary`,
+        },
+        {
+          name: `twitter:site`,
+          content: `@${site.siteMetadata?.social?.twitter}` || ``,
         },
         {
           name: `twitter:creator`,
@@ -85,6 +95,10 @@ const SEO = ({ description, lang, meta, title, ogType = 'website', ogImage }) =>
         {
           name: `twitter:title`,
           content: title,
+        },
+        {
+          name: `twitter:description`,
+          content: metaDescription,
         },
         {
           name: `twitter:image`,
