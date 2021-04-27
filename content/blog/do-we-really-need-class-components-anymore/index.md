@@ -2,10 +2,10 @@
 title: Do we really need class components anymore?
 date: "2021-04-21T22:40:32.169Z"
 tags: ["reactjs", "tutorials"]
-featured: ./do-we-need-class-components-anymore.jpg
+featured: ./do-we-really-need-class-components-anymore.jpg
 ---
 
-![Do we need class components anymore?](./do-we-need-class-components-anymore.jpg)
+![Do we need class components anymore?](./do-we-really-need-class-components-anymore.jpg)
 
 ReactJS is a mature enough library that becomes the first choice for developers. When ReactJS got launched it had a strong concept of *class components*. The reason they were popular because of their life cycle methods. With the ease of these life cycle methods, you can trigger your custom event at the right time.
 Back then, it was clear when you need any state in the component goes for *class* else *functional*.
