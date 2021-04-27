@@ -20,6 +20,7 @@ const BlogPostTemplate = ({ data, location }) => {
           description={description || post.excerpt}
           ogType='article'
           ogImage={featured.childImageSharp?.fluid?.src}
+          slug={post.fields.slug.slice(0, -1)}
         />
         <article
           className="blog-post"

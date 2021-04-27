@@ -7,6 +7,7 @@ module.exports = {
     },
     description: `Frontend Architect at PublicisSapient, Frontend Consultant interested in making lives of frontend developers easier.`,
     siteUrl: `https://gsin.in/`,
+    canonicalUrl: `https://gsin.hashnode.dev`,
     postSrc: `https://github.com/gsin11/gsin11.github.io/tree/master/content/blog`,
     social: {
       twitter: `gsin11`

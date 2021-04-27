@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const SEO = ({ description, lang, meta, title, ogType = 'website', ogImage }) => {
+const SEO = ({ description, lang, meta, title, ogType = 'website', ogImage = "", slug }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -19,6 +19,7 @@ const SEO = ({ description, lang, meta, title, ogType = 'website', ogImage }) =>
             title
             description
             siteUrl
+            canonicalUrl
             author {
               name
               summary
@@ -37,6 +38,13 @@ const SEO = ({ description, lang, meta, title, ogType = 'website', ogImage }) =>
   const defaultTitle = site.siteMetadata?.title
   const ogSiteName = `${site.siteMetadata.author.name} - ${site.siteMetadata.author.summary}`
   const ogUrl = site.siteMetadata.siteUrl
+  let helmetLinks = []
+  if (slug) {
+    helmetLinks.push({
+      rel: `canonical`,
+      href: site.siteMetadata?.canonicalUrl + slug,
+    })
+  }
 
   return (
     <Helmet
@@ -45,6 +53,7 @@ const SEO = ({ description, lang, meta, title, ogType = 'website', ogImage }) =>
       }}
       title={title}
       titleTemplate={defaultTitle ? `%s - ${defaultTitle}` : null}
+      link={helmetLinks}
       meta={[
         {
           name: `description`,
