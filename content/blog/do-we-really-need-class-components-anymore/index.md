@@ -8,11 +8,12 @@ featured: ./do-we-really-need-class-components-anymore.jpg
 ![Do we need class components anymore?](./do-we-really-need-class-components-anymore.jpg)
 
 ReactJS is a mature enough library that becomes the first choice for developers. When ReactJS got launched it had a strong concept of *class components*. The reason they were popular because of their life cycle methods. With the ease of these life cycle methods, you can trigger your custom event at the right time.
-Back then, it was clear when you need any state in the component goes for *class* else *functional*.
 
-Modern react, the reason I call it modern because over the period of time React library has changed a lot. You shouldn't go with the assumption of stateful vs. functional components. Yet, functional components can also be stateful components.
+Before it was clear, when you need stateful component go with *class component* otherwise *functional component*.
 
-Let's start with some examples and it will be clear to you why you may not need class components anymore.
+In this post, I call it modern React as it changed a lot over the period of time. Don't go with the assumption of stateful vs. functional components. Functional components can also be stateful components.
+
+Do you want to know why?
 
 ## Rendering JSX
 ```js
@@ -30,12 +31,12 @@ class ClassComponent extends Component {
   }
 }
 ```
-You can see in the above example, we are trying to render a single string which is not a challenge in `FunctionalComponent`. But when it comes to `ClassComponent` becomes complex. Why we need Component a class to extend from the ReactJS library? Basically, the `Component` is doing nothing but rendering components with the `render()` function.
+You can see in the above example, we are trying to render a single string which is not a challenge in `FunctionalComponent`. But `ClassComponent` makes it more complex.
 
 ## Handling state
-When it comes to handling state in ReactJS, it is debatable which type of component to go with. For example, I am working on a legacy project with React 15.x.x then I would definitely go with the `class` component. Because it gives me ReactJS life cycle methods which help to handle component state.
+When it comes to handling state in ReactJS, it is debatable which type of component to go with. For example, I am working on a legacy project with React 15.x.x then I would definitely go with the class component. Because it gives me ReactJS life cycle methods which help to handle component state.
 
-Since React 16.8 added support for **React Hooks**, now we can handle state within the functional components and a lot more.
+We can handle state with **React hooks** since **React 16.8** within functional components.
 
 ```js
 /* State handling with class component */
@@ -81,7 +82,7 @@ const FunctionalComponent = () => {
 ```
 **That was easy, right?**
 
-We can handle the entire component state with a single ReactJS hook. Not only this but we have some other useful hooks to work with.
+We can do much more with React hooks. See below:
 
 ## Lifecycle Methods
 Let's talk about React lifecycle methods now. These methods are the backbone of the ReactJS. I still can recall when someone asked me about these methods in one of the interviews. These methods were only part of `React.Component` before but now area available with Hooks.
@@ -128,7 +129,7 @@ const FunctionalComponent = () => {
 }
 ```
 
-See, how easy it is to call an API within a functional component. Which was never possible with the functional component.
+See, how easy it is to call an API within a functional component using [useEffect](https://reactjs.org/docs/hooks-reference.html#useeffect).
 
 ### On Unmounting (componentWillUnmount)
 In some instances, where you need to clear your timers and de-allocate memory on the unmount.
@@ -182,12 +183,14 @@ const FunctionalComponent = () => {
 ```
 
 ## Conclusion
-There are some areas where you still need class components. But I always try to use the functional components as much as I can.
+There are some areas where you might need class components. However, I prefer to go with functional.
 
-In the example above you have seen, we can gain everything by using the functional components. But in case your current project is running on class components, don't worry there is no harm to that. Perhaps, I would recommend using functional components in your further project development. There is no official announcement from the ReactJS team to deprecate class components.
+In the example above you have seen, we can gain everything by using the functional components. In case your current project is running on class components, don't worry there is no harm to that. Perhaps, I would recommend using functional components over class.
+
+Nevertheless, ReactJS community is still supporting class components and there is no hard rule to avoid them.
 
 ## Useful links
+- [Hooks at a Glance](https://reactjs.org/docs/hooks-overview.html)
 - [Introduction to Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [Hooks API Reference](https://reactjs.org/docs/hooks-reference.html)
 - [Building Your Own Hooks](https://reactjs.org/docs/hooks-custom.html)
-- [useReducer Hook](https://reactjs.org/docs/hooks-reference.html#usereducer)
-- [useRef Hook](https://reactjs.org/docs/hooks-reference.html#useref)
