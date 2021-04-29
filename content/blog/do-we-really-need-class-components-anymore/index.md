@@ -131,6 +131,8 @@ const FunctionalComponent = () => {
 
 See, how easy it is to call an API within a functional component using [useEffect](https://reactjs.org/docs/hooks-reference.html#useeffect).
 
+Note: The second parameter of the `useEffect` hook is basically listening to an array of items on which you want to re-run your hook.
+
 ### On Unmounting (componentWillUnmount)
 In some instances, where you need to clear your timers and de-allocate memory on the unmount.
 ```js
