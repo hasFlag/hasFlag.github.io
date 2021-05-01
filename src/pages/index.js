@@ -16,8 +16,8 @@ const PROJECTS = [
     link: 'https://github-jobs-peach.vercel.app/',
   }, {
     id: 2,
-    label: 'TailwindCSS Components',
-    link: 'https://react-tailwindcss-components.vercel.app/',
+    label: 'ReactJS TailwindCSS Components',
+    link: 'https://reactjs-tailwindcss.vercel.app/',
   }
 ]
 
