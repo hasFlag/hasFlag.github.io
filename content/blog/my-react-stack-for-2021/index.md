@@ -59,7 +59,7 @@ An application should have consistent behavior across all the pages. There are g
 
 ## Form Handling
 
-When it comes to handling user inputs, forms are required. Forms can easily mess up your project. I would suggest carefully choose form-library in order to add validations and state handlings. There are some form libraries to choose from. I would prefer to for with [React Hook Form](https://react-hook-form.com/) or [Formik](https://formik.org/). Both libraries are very performance-oriented and have good community support. You can easily customize them, and use them as per your needs.
+When it comes to handling user inputs, forms are required. Forms can easily mess up your project. I would suggest carefully choose form-library in order to add validations and state handlings. There are some form libraries to choose from. I would prefer to go with [React Hook Form](https://react-hook-form.com/) or [Formik](https://formik.org/). Both libraries are very performance-oriented and have good community support. You can easily customize them, and use them as per your needs.
 
 ## Testing
 
