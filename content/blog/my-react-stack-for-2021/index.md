@@ -63,7 +63,7 @@ When it comes to handling user inputs, forms are required. Forms can easily mess
 
 ## Testing
 
-One of the most important parts of every project. It's been a couple of years since I came across [React Testing Library (RTL)](https://testing-library.com/docs/react-testing-library/intro/) which comes are default testing library inside your create-react-app project. This builds on top of <abbr title="Document Object Model">DOM</abbr> Testing Library by adding APIs for working with React components.
+One of the most important parts of every project. It's been a couple of years since I came across [React Testing Library (RTL)](https://testing-library.com/docs/react-testing-library/intro/) which comes as default testing library inside your create-react-app project. This builds on top of <abbr title="Document Object Model">DOM</abbr> Testing Library by adding APIs for working with React components.
 
 You can use this library in your old ReactJS project as well
 
