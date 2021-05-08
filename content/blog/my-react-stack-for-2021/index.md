@@ -21,7 +21,7 @@ $ npx create-react-app my-app
 $ npx create-react-app my-app --template typescript
 ```
 
-It will help you to make your JavaScript code less error-prone since it validates data types and a lot more on development time itself.
+It will help you to make your JavaScript code less error-prone since it validates data types and a lot more during the development time.
 
 ## React Router
 
