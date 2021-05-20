@@ -21,7 +21,7 @@ $ npx create-react-app my-app
 $ npx create-react-app my-app --template typescript
 ```
 
-It will help you to make your JavaScript code less error-prone since it validates data types and a lot more on development time itself.
+It will help you to make your JavaScript code less error-prone since it validates data types and a lot more during the development time.
 
 ## React Router
 
@@ -59,11 +59,11 @@ An application should have consistent behavior across all the pages. There are g
 
 ## Form Handling
 
-When it comes to handling user inputs, forms are required. Forms can easily mess up your project. I would suggest carefully choose form-library in order to add validations and state handlings. There are some form libraries to choose from. I would prefer to for with [React Hook Form](https://react-hook-form.com/) or [Formik](https://formik.org/). Both libraries are very performance-oriented and have good community support. You can easily customize them, and use them as per your needs.
+When it comes to handling user inputs, forms are required. Forms can easily mess up your project. I would suggest carefully choose form-library in order to add validations and state handlings. There are some form libraries to choose from. I would prefer to go with [React Hook Form](https://react-hook-form.com/) or [Formik](https://formik.org/). Both libraries are very performance-oriented and have good community support. You can easily customize them, and use them as per your needs.
 
 ## Testing
 
-One of the most important parts of every project. It's been a couple of years since I came across [React Testing Library (RTL)](https://testing-library.com/docs/react-testing-library/intro/) which comes are default testing library inside your create-react-app project. This builds on top of <abbr title="Document Object Model">DOM</abbr> Testing Library by adding APIs for working with React components.
+One of the most important parts of every project. It's been a couple of years since I came across [React Testing Library (RTL)](https://testing-library.com/docs/react-testing-library/intro/) which comes as default testing library inside your create-react-app project. This builds on top of <abbr title="Document Object Model">DOM</abbr> Testing Library by adding APIs for working with React components.
 
 You can use this library in your old ReactJS project as well
 
