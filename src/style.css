@@ -128,7 +128,8 @@ body.dark {
   visibility: hidden;
 }
 
-.anchor:hover svg {
+.anchor:hover svg,
+.anchor:focus svg {
   visibility: visible;
 }
 
