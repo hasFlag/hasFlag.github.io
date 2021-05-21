@@ -2,10 +2,10 @@
 title: Up and running with RaspberryPi with Docker
 date: "2021-05-19T22:40:32.169Z"
 tags: ["infra", "docker", "tutorials", "setup", "raspberryPi"]
-featured: ./docker_raspberrypi_setup.jpg
+featured: ./docker_raspberrypi_setup.png
 ---
 
-![Raspberry Pi Imager](./docker_raspberrypi_setup.jpg)
+![Raspberry Pi Imager](./docker_raspberrypi_setup.png)
 
 In this article, I will show you how to configure RaspberryPi with docker and docker-compose. I am personally using it for my local hone projects where I can run these projects without interfering RaspbianOS image.
 

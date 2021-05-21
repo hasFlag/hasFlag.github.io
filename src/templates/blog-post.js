@@ -10,7 +10,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const postSrc = `${data.site.siteMetadata.postSrc}${post.fields.slug}index.md`
   const { previous, next } = data
-  const { title, description, date, tags, featured, } = post.frontmatter
+  const { title, description, date, tags, featured } = post.frontmatter
 
   return (
     <>
@@ -18,7 +18,7 @@ const BlogPostTemplate = ({ data, location }) => {
         <SEO
           title={title}
           description={description || post.excerpt}
-          ogType='article'
+          ogType="article"
           ogImage={featured.childImageSharp?.fluid?.src}
           slug={post.fields.slug.slice(0, -1)}
         />
@@ -33,12 +33,26 @@ const BlogPostTemplate = ({ data, location }) => {
             {" - "}
             <small>
               {tags.map((tag, index) => {
-                return <>{(index ? ', ' : '')}<Link key={`tag_${index}`} to={`/tags/${tag}`} title={`click to visit ${tag} tag`}>{tag}</Link></>
+                return (
+                  <>
+                    {index ? ", " : ""}
+                    <Link
+                      key={`tag_${index}`}
+                      to={`/tags/${tag}`}
+                      title={`click to visit ${tag} tag`}
+                    >
+                      {tag}
+                    </Link>
+                  </>
+                )
               })}
             </small>
             {" - "}
             <small>{post.fields.readingTime.text}</small>
-            <small>{" - "}<a href={postSrc}>edit post</a></small>
+            <small>
+              {" - "}
+              <a href={postSrc}>edit post</a>
+            </small>
           </header>
           <section
             dangerouslySetInnerHTML={{ __html: post.html }}
@@ -109,7 +123,7 @@ export const pageQuery = graphql`
         tags
         featured {
           childImageSharp {
-            fluid(maxWidth: 800, quality: 100) {
+            fluid(maxWidth: 1200, quality: 100) {
               src
             }
           }
