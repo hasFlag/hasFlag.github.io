@@ -125,6 +125,7 @@ body.dark {
 }
 
 .anchor svg {
+  fill: var(--color-text);
   visibility: hidden;
 }
 
