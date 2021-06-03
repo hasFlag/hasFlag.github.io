@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import {declineCookieModule, acceptCookieModule} from "../components/cookieBanner"
 
 const CookiePolicy = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -85,6 +86,10 @@ const CookiePolicy = ({ data, location }) => {
         <li>Email: gurupreetsingh2000@gmail.com</li>
       </ul>
       <a href="https://www.cookiepolicygenerator.com/live.php?token=tux8ZukyWoAfO8yKL2kNs6pDcz3Xxu3o">Verify this page</a>
+      <div className="opt-in-out">
+        <button onClick={() => acceptCookieModule()}>Opt-in</button>
+        <button onClick={() => declineCookieModule()}>Opt-out</button>
+      </div>
     </Layout>
   )
 }

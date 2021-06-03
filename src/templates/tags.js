@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import CookieBanner from "../components/cookieBanner"
+import {CookieBanner} from "../components/cookieBanner"
 
 // Components
 import { Link, graphql } from "gatsby"

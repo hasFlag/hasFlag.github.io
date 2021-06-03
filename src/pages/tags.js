@@ -6,7 +6,7 @@ import kebabCase from "lodash/kebabCase"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import CookieBanner from "../components/cookieBanner"
+import {CookieBanner} from "../components/cookieBanner"
 
 const TagsPage = ({
   data: {

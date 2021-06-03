@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import CookieBanner from "../components/cookieBanner"
+import {CookieBanner} from "../components/cookieBanner"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
