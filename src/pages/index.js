@@ -4,21 +4,27 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import {CookieBanner} from "../components/cookieBanner"
+import { CookieBanner } from "../components/cookieBanner"
 
-const Posts = React.lazy(() => import('../components/posts'));
-const Projects = React.lazy(() => import('../components/projects'));
+const Posts = React.lazy(() => import("../components/posts"))
+const Projects = React.lazy(() => import("../components/projects"))
 
 const PROJECTS = [
   {
     id: 1,
-    label: 'Github Jobs',
-    link: 'https://github-jobs-peach.vercel.app/',
-  }, {
+    label: "Github Jobs",
+    link: "https://github-jobs-peach.vercel.app/",
+  },
+  {
     id: 2,
-    label: 'ReactJS TailwindCSS Components',
-    link: 'https://reactjs-tailwindcss.vercel.app/',
-  }
+    label: "ReactJS TailwindCSS Components",
+    link: "https://reactjs-tailwindcss.vercel.app/",
+  },
+  {
+    id: 3,
+    label: "EGGCELLENT",
+    link: "https://gs-strapi-fe.vercel.app/",
+  },
 ]
 
 const Index = ({ data, location }) => {
@@ -37,11 +43,11 @@ const Index = ({ data, location }) => {
             <Link to="/blog">All posts</Link>
           </div>
           <div>
-            {!isSSR &&
+            {!isSSR && (
               <React.Suspense fallback={<div>Loading...</div>}>
                 <Posts isHomepage posts={posts} limit={5} />
               </React.Suspense>
-            }
+            )}
           </div>
         </section>
         <section className="segment">
@@ -49,11 +55,11 @@ const Index = ({ data, location }) => {
             <h2>Latest Projects</h2>
           </div>
           <div>
-            {!isSSR &&
+            {!isSSR && (
               <React.Suspense fallback={<div>Loading...</div>}>
                 <Projects projects={PROJECTS} />
               </React.Suspense>
-            }
+            )}
           </div>
         </section>
       </Layout>
