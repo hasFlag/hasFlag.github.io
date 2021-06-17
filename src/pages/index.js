@@ -25,6 +25,11 @@ const PROJECTS = [
     label: "EGGCELLENT",
     link: "https://gs-strapi-fe.vercel.app/",
   },
+  {
+    id: 4,
+    label: "THE PLANET",
+    link: "https://the-planets.vercel.app/",
+  },
 ]
 
 const Index = ({ data, location }) => {
