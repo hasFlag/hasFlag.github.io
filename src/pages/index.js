@@ -28,7 +28,7 @@ const PROJECTS = [
   {
     id: 4,
     label: "THE PLANET",
-    link: "https://the-planets.vercel.app/",
+    link: "https://the-planet.vercel.app/",
   },
 ]
 
