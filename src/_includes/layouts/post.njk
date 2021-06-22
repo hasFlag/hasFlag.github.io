@@ -25,7 +25,7 @@
 
   <title>{{ title }}</title>
 
-  <meta property="og:url" content="{{userData.websiteUrl}}">
+  <meta property="og:url" content="{{userData.websiteUrl}}/blog/{{ title | slug }}">
   <meta property="og:author" content="{{userData.siteName}}">
   <meta property="og:site_name" content="{{userData.siteName}} - Each space has its story">
   <meta name="twitter:card" content="summary">
@@ -33,15 +33,15 @@
   <meta name="twitter:creator" content="@{{userData.twitter}}">
   <meta name="google-site-verification" content="{{userData.googleSiteVerificationCode}}">
 
-  <meta name="description" content="Frontend Architect at PublicisSapient, Frontend Consultant interested in making lives of frontend developers easier.">
-  <meta property="og:description" content="Frontend Architect at PublicisSapient, Frontend Consultant interested in making lives of frontend developers easier.">
+  <meta name="description" content="{{ogDescription}}">
+  <meta property="og:description" content="{{ogDescription}}">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="{{userData.websiteUrl}}">
-  <meta name="twitter:description" content="Frontend Architect at PublicisSapient, Frontend Consultant interested in making lives of frontend developers easier.">
+  <meta property="og:image" content="{{ogImage}}">
+  <meta name="twitter:description" content="{{ogDescription}}">
   <meta name="twitter:image" content="{{userData.websiteUrl}}">
   <meta property="og:title" content="{{userData.siteName}}">
   <meta name="twitter:title" content="{{userData.siteName}}">
-  <link rel="canonical" href="{{ canonicalUrl }}">
+  <link rel="canonical" href="{{ userData.canonicalBaseUrl }}{{ title | slug }}">
 </head>
 <body>
   <div class="global-wrapper">

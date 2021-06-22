@@ -1,5 +1,6 @@
 const fs = require("fs");
 const Image = require("@11ty/eleventy-img");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 (() => {
   // directory path
@@ -28,11 +29,24 @@ const Image = require("@11ty/eleventy-img");
   });
 })();
 
+(async () => {
+  await Image("./src/assets/icons/favicon.png", {
+    widths: [32, 48, 72, 96, 144, 192, 256, 384, 512],
+    formats: ["png"],
+    outputDir: "./public/assets/icons/",
+    filenameFormat: function (id, src, width, format, options) {
+      return `favicon-${width}x${width}.${format}`;
+    },
+  });
+})();
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/css/");
   eleventyConfig.addPassthroughCopy("./src/assets/js/");
 
   eleventyConfig.addLayoutAlias("base", "layouts/base.njk");
+  eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   return {
     dir: {

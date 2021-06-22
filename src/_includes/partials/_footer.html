@@ -1,8 +1,10 @@
 <footer>
   <ul>
-    <li><a href="https://twitter.com/gsin11">Twitter</a></li>
-    <li><a href="https://www.linkedin.com/in/gsin11/">Linkedin</a></li>
-    <li><a href="https://github.com/gsin11">GitHub</a></li>
+  {% for links in socialLinks %}
+    <li>
+      <a href={{ links.link }}>{{ links.label }}</a>
+    </li>
+  {% endfor %}
     <li><a href="/cookie-policy">Cookie Policy</a></li>
     <li><a href="/rss.xml">rss</a></li>
   </ul>

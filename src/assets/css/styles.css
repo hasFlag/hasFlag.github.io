@@ -63,7 +63,11 @@
 }
 
 /* Normalize */
-/* Prose */
+picture {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
 
 p {
   line-height: var(--lineHeight-relaxed);
@@ -134,6 +138,31 @@ table thead tr th {
 }
 
 /* Normalize ends */
+
+.post-list-item {
+  margin-bottom: var(--spacing-8);
+  margin-top: var(--spacing-8);
+}
+
+.post-list-item p {
+  margin-bottom: var(--spacing-0);
+}
+
+.post-list-item h2 {
+  font-size: var(--fontSize-3);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-2);
+  margin-top: var(--spacing-0);
+}
+
+.post-list-item header {
+  margin-bottom: var(--spacing-2);
+}
+
+time,
+small {
+  font-size: var(--fontSize-0);
+}
 
 body {
   font-family: var(--font-body);
