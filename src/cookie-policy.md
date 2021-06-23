@@ -4,7 +4,7 @@ layout: base
 ---
 
 <h1>Cookie Policy for gsin.in</h1>
-<p>This is the Cookie Policy for gsin.in, accessible from https://gsin.in</p>
+<p>This is the Cookie Policy for {{ userData.siteName }}, accessible from <a href="{{ userData.websiteUrl }}/cookie-policy">{{ userData.websiteUrl }}/cookie-policy</a></p>
 <p><strong>What Are Cookies</strong></p>
 <p>As is common practice with almost all professional websites this site uses cookies, which are tiny files that are downloaded to your computer, to improve your experience. This page describes what information they gather, how we use it and why we sometimes need to store these cookies. We will also share how you can prevent these cookies from being stored however this may downgrade or 'break' certain elements of the sites functionality.</p>
 <p><strong>How We Use Cookies</strong></p>
@@ -34,5 +34,5 @@ layout: base
 <p>For more general information on cookies, please read <a href="https://www.privacypolicyonline.com/what-are-cookies/">"What Are Cookies"</a>.</p>
 <p>However if you are still looking for more information then you can contact us through one of our preferred contact methods:</p>
 <ul>
-<li>Email: gurupreetsingh2000@gmail.com</li>
+<li>Email: {{ userData.email }}</li>
 </ul>

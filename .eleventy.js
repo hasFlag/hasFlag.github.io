@@ -1,5 +1,6 @@
 const fs = require("fs");
 const htmlmin = require("html-minifier");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 const CleanCSS = require("clean-css");
 const readingTime = require("eleventy-plugin-reading-time");
 const { minify } = require("terser");
@@ -84,6 +85,8 @@ module.exports = function (eleventyConfig) {
       }
     }
   );
+
+  eleventyConfig.addPlugin(pluginRss);
 
   return {
     dir: {
