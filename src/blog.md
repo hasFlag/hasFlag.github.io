@@ -1,5 +1,5 @@
 ---
-title: Blog
+title: Gurpreet Singh - Blog
 layout: base
 ---
 
