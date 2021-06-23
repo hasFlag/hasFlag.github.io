@@ -99,7 +99,7 @@ a:hover {
 }
 
 .has-border {
-  border-bottom: var(--color-text-primary) var(--spacing-px) solid;
+  border-bottom: var(--color-text-primary) 1px solid;
 }
 
 a.external {
