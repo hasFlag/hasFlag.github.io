@@ -6,7 +6,7 @@ layout: base
 ## Blog posts
 
 <ul class="no-style">
-{% for post in collections.posts %}
+{%- for post in collections.posts reversed -%}
   <li>
     <article class="post-list-item" itemscope="" itemtype="http://schema.org/Article">
       <header>
@@ -15,12 +15,10 @@ layout: base
             <span itemprop="headline">{{ post.data.title }}</span>
           </a>
         </h2>
-        <small>{{ post.data.ogDescription }}</small>
-        <p>
-          <time itemprop="datePublished"><strong>Published on:</strong> {{ post.data.date }}</time>
-        </p>
+        <time itemprop="datePublished"><strong>Published on:</strong> {{ post.date | dateFormat }}</time>
       </header>
+      <p itemprop="description">{{ post.data.ogDescription }}</p>
     </article>
   </li>
-{% endfor %}
+{%- endfor -%}
 </ul>

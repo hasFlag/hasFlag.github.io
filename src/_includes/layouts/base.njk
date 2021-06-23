@@ -13,9 +13,6 @@
     {{ css | cssmin | safe }}
   </style>
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}" />
-  <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id={{userData.googleAnalyticsCode}}"></script>
-  <script>function gtag() { window.dataLayer && window.dataLayer.push(arguments) } window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "{{userData.googleAnalyticsCode}}", { send_page_view: !1 })</script>
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
   <link rel="alternate" type="application/rss+xml" href="/rss.xml">
 

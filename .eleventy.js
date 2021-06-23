@@ -72,6 +72,11 @@ module.exports = function (eleventyConfig) {
     return new CleanCSS({}).minify(code).styles;
   });
 
+  eleventyConfig.addFilter("dateFormat", function (value) {
+    const dd = new Date(value);
+    return dd.toDateString();
+  });
+
   eleventyConfig.addNunjucksAsyncFilter(
     "jsmin",
     async function (code, callback) {

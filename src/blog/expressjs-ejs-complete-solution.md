@@ -1,6 +1,6 @@
 ---
 title: Express.js + EJS complete solution
-date: "2021-03-02T22:40:32.169Z"
+date: "2021-03-02"
 ogDescription: People who have less time to invest and are familiar with the Handlebar template engine can quickly set up their website.
 ogImage: /assets/img/expressjs+ejs-640w.jpeg
 ---
