@@ -1,144 +1,4 @@
-:root {
-  --maxWidth-none: "none";
-  --maxWidth-xs: 20rem;
-  --maxWidth-sm: 24rem;
-  --maxWidth-md: 28rem;
-  --maxWidth-lg: 32rem;
-  --maxWidth-xl: 36rem;
-  --maxWidth-2xl: 42rem;
-  --maxWidth-3xl: 48rem;
-  --maxWidth-4xl: 64rem;
-  --maxWidth-full: "100%";
-  --maxWidth-wrapper: var(--maxWidth-4xl);
-  --spacing-px: "1px";
-  --spacing-0: 0;
-  --spacing-1: 0.25rem;
-  --spacing-2: 0.5rem;
-  --spacing-3: 0.75rem;
-  --spacing-4: 1rem;
-  --spacing-5: 1.25rem;
-  --spacing-6: 1.5rem;
-  --spacing-8: 2rem;
-  --spacing-10: 2.5rem;
-  --spacing-12: 3rem;
-  --spacing-16: 4rem;
-  --spacing-20: 5rem;
-  --spacing-24: 6rem;
-  --spacing-32: 8rem;
-  --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --fontFamily-serif: "Inter", "Georgia", Cambria, "Times New Roman", Times,
-    serif;
-  --font-body: var(--fontFamily-serif);
-  --font-heading: var(--fontFamily-sans);
-  --fontWeight-normal: 400;
-  --fontWeight-medium: 500;
-  --fontWeight-semibold: 600;
-  --fontWeight-bold: 700;
-  --fontWeight-extrabold: 800;
-  --fontWeight-black: 900;
-  --fontSize-root: 16px;
-  --lineHeight-none: 1;
-  --lineHeight-tight: 1.1;
-  --lineHeight-normal: 1.5;
-  --lineHeight-relaxed: 1.625;
-  /* 1.200 Minor Third Type Scale */
-  --fontSize-0: 0.833rem;
-  --fontSize-1: 1rem;
-  --fontSize-2: 1.2rem;
-  --fontSize-3: 1.44rem;
-  --fontSize-4: 1.728rem;
-  --fontSize-5: 1.9rem;
-  --fontSize-6: 2rem;
-  --fontSize-7: 2.1rem;
-
-  --color-text-primary: #111827;
-  --color-bg: #fff;
-  --color-text-secondary: #0034a5;
-  --color-theme-toggle: var(--color-text-primary);
-
-  --cookie-text: rgb(94, 101, 194);
-  --cookie-bg: rgb(240, 237, 255);
-}
-
-/* Normalize */
-picture {
-  display: block;
-  width: 100%;
-  text-align: center;
-}
-
-p {
-  line-height: var(--lineHeight-relaxed);
-  --baseline-multiplier: 0.179;
-  --x-height-multiplier: 0.35;
-  margin: var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0);
-  padding: var(--spacing-0);
-}
-
-ul,
-ol {
-  margin-left: var(--spacing-0);
-  margin-right: var(--spacing-0);
-  padding: var(--spacing-0);
-  margin-bottom: var(--spacing-8);
-  list-style-position: inside;
-  list-style-image: none;
-}
-
-ul li,
-ol li {
-  padding-left: var(--spacing-0);
-  margin-bottom: calc(var(--spacing-8) / 2);
-}
-
-li > p {
-  margin-bottom: calc(var(--spacing-8) / 2);
-}
-
-li *:last-child {
-  margin-bottom: var(--spacing-0);
-}
-
-li > ul {
-  margin-left: var(--spacing-8);
-  margin-top: calc(var(--spacing-8) / 2);
-}
-
-blockquote {
-  color: var(--color-text-light);
-  margin-left: calc(-1 * var(--spacing-6));
-  margin-right: var(--spacing-8);
-  padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
-  border-left: var(--spacing-1) solid var(--color-primary);
-  font-size: var(--fontSize-2);
-  font-style: italic;
-  margin-bottom: var(--spacing-8);
-}
-
-blockquote > :last-child {
-  margin-bottom: var(--spacing-0);
-}
-
-blockquote > ul,
-blockquote > ol {
-  list-style-position: inside;
-}
-
-table {
-  width: 100%;
-  margin-bottom: var(--spacing-8);
-  border-collapse: collapse;
-  border-spacing: 0.25rem;
-}
-
-table thead tr th {
-  border-bottom: 1px solid var(--color-primary);
-}
-
 /* Normalize ends */
-
 .post-list-item {
   margin-bottom: var(--spacing-8);
   margin-top: var(--spacing-8);
@@ -164,33 +24,6 @@ small {
   font-size: var(--fontSize-0);
 }
 
-body {
-  font-family: var(--font-body);
-  font-size: var(--fontSize-1);
-  color: var(--color-text-primary);
-  background-color: var(--color-bg);
-
-  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
-  -moz-transition: background-color 0.5s ease, color 0.5s ease;
-  -o-transition: background-color 0.5s ease, color 0.5s ease;
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-body.dark {
-  --color-text-primary: #fff;
-  --color-bg: #111827;
-  --color-text-secondary: #0051ff;
-  --color-theme-toggle: #ffc600;
-
-  -webkit-transition: background-color 0.5s ease, color 0.5s ease,
-    box-shadow 0.5s ease;
-  -moz-transition: background-color 0.5s ease, color 0.5s ease,
-    box-shadow 0.5s ease;
-  -o-transition: background-color 0.5s ease, color 0.5s ease,
-    box-shadow 0.5s ease;
-  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
-}
-
 a {
   color: var(--color-text-secondary);
   text-decoration: none;
@@ -198,6 +31,17 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.anchor,
+.anchor:hover {
+  font-style: italic;
+  color: var(--color-text-primary);
+  opacity: 0.7;
+}
+
+.anchor:hover {
+  text-decoration: none;
 }
 
 .as-text,
@@ -238,7 +82,7 @@ a:hover {
 }
 
 .global-header > div:last-child a:last-child {
-  margin-right: 0;
+  margin-right: var(--spacing-0);
 }
 
 /* Header section ends */
@@ -251,11 +95,11 @@ a:hover {
 
 .main-heading {
   font-size: var(--fontSize-7);
-  margin: 0;
+  margin: var(--spacing-0);
 }
 
 .has-border {
-  border-bottom: var(--color-text-primary) 1px solid;
+  border-bottom: var(--color-text-primary) var(--spacing-px) solid;
 }
 
 a.external {
@@ -268,7 +112,7 @@ a.external::after {
   background-color: var(--color-text-secondary);
   position: absolute;
   top: 6px;
-  right: 0;
+  right: var(--spacing-0);
   height: 3px;
   width: 12px;
   transform: rotate(315deg);
@@ -279,7 +123,7 @@ a.external::before {
   position: absolute;
   background-color: transparent;
   top: 2px;
-  right: 0;
+  right: var(--spacing-0);
   height: 8px;
   width: 8px;
   transform: rotate(270deg);
@@ -297,111 +141,6 @@ footer ul li {
   padding: var(--spacing-2);
 }
 
-/* Toggle Mode */
-.toggleMode {
-  opacity: 0.65;
-  position: relative;
-  border-radius: 5px;
-  width: 40px;
-  height: 25px;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  transition: opacity 0.3s ease 0s;
-  -webkit-transition: opacity 0.3s ease 0s;
-  -moz-transition: opacity 0.3s ease 0s;
-  -o-transition: opacity 0.3s ease 0s;
-  border: none;
-  outline: none;
-  background: none;
-  cursor: pointer;
-  padding: 0px;
-  appearance: none;
-}
-
-.toggleMode:hover,
-.toggleMode:focus {
-  opacity: 1;
-}
-
-.toggleMode div {
-  pointer-events: none;
-
-  position: relative;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  border: none;
-  background-color: transparent;
-  transform: scale(1);
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -o-transform: scale(1);
-  transition: all 0.45s ease 0s;
-  -webkit-transition: all 0.45s ease 0s;
-  -moz-transition: all 0.45s ease 0s;
-  -o-transition: all 0.45s ease 0s;
-  overflow: hidden;
-  box-shadow: inset 8px -8px 0px 0px var(--color-theme-toggle);
-}
-
-.toggleMode[data-theme="dark"] div {
-  border: 4px solid var(--color-theme-toggle);
-  background-color: var(--color-theme-toggle);
-  transform: scale(0.55);
-  -webkit-transform: scale(0.55);
-  -moz-transform: scale(0.55);
-  -o-transform: scale(0.55);
-  transition: all 0.45s ease 0s;
-  overflow: visible;
-  box-shadow: none;
-}
-
-.toggleMode[data-theme="dark"] div:before {
-  content: "";
-  position: absolute;
-  right: -9px;
-  top: -9px;
-  height: 24px;
-  width: 24px;
-  border: 2px solid var(--color-theme-toggle);
-  border-radius: 50%;
-  transform: translate(14px, -14px);
-  -webkit-transform: translate(14px, -14px);
-  -moz-transform: translate(14px, -14px);
-  -o-transform: translate(14px, -14px);
-  opacity: 0;
-  transition: transform 0.45s ease 0s;
-}
-
-.toggleMode[data-theme="dark"] div:after {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  margin: -4px 0px 0px -4px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  box-shadow: 0 -23px 0 var(--color-theme-toggle),
-    0 23px 0 var(--color-theme-toggle), 23px 0 0 var(--color-theme-toggle),
-    -23px 0 0 var(--color-theme-toggle), 15px 15px 0 var(--color-theme-toggle),
-    -15px 15px 0 var(--color-theme-toggle),
-    15px -15px 0 var(--color-theme-toggle),
-    -15px -15px 0 var(--color-theme-toggle);
-  transform: scale(1);
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -o-transform: scale(1);
-  transition: all 0.35s ease 0s;
-  -webkit-transition: all 0.35s ease 0s;
-  -moz-transition: all 0.35s ease 0s;
-  -o-transition: all 0.35s ease 0s;
-}
-/* Toggle Mode ends */
-
 @media (min-width: 42rem) {
   .global-header > div:last-child {
     display: flex;
@@ -409,6 +148,6 @@ footer ul li {
     align-items: baseline;
   }
   .global-header > div:last-child nav {
-    margin-bottom: 0;
+    margin-bottom: var(--spacing-0);
   }
 }

@@ -6,5 +6,23 @@
   "github": "gsin11",
   "googleAnalyticsCode": "G-LBFCMQXE49",
   "googleSiteVerificationCode": "xejEbN0SW3h_El6KLaPjB9JR1Xzuy3pahey27zavIIg",
-  "canonicalBaseUrl": "https://gsin.hashnode.dev/"
+  "canonicalBaseUrl": "https://gsin.hashnode.dev/",
+  "projects": [
+    {
+      "label": "Github Jobs",
+      "link": "https://github-jobs-peach.vercel.app/"
+    },
+    {
+      "label": "ReactJS TailwindCSS Components",
+      "link": "https://reactjs-tailwindcss.vercel.app/"
+    },
+    {
+      "label": "EGGCELLENT",
+      "link": "https://gs-strapi-fe.vercel.app/"
+    },
+    {
+      "label": "THE PLANET",
+      "link": "https://the-planet.vercel.app/"
+    }
+  ]
 }

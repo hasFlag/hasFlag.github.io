@@ -4,7 +4,7 @@
       <a href="/" class="as-text">Gurpreet Singh</a>
     </h1>
     <div>
-      <button data-theme="light" class="toggleMode"><div></div></button>
+      <button data-theme="light" class="toggleMode" name="switch theme"><div>toggle theme</div></button>
     </div>
   </div>
   <div class="has-border">
@@ -14,9 +14,9 @@
     </nav>
     <nav>
       {% for links in socialLinks %}
-        <a href={{ links.link }}>{{ links.label }}</a>
+        <a href="{{ links.link }}" rel="noreferrer" target="_blank">{{ links.label }}</a>
       {% endfor %}
-      <a href="https://www.buymeacoffee.com/gsin" target="blank"><strong>Buy me a <span role="img" aria-label="coffee">☕️</span></strong></a>
+      <a href="https://www.buymeacoffee.com/gsin" target="blank" rel="noreferrer"><strong>Buy me a <span role="img" aria-label="coffee">☕️</span></strong></a>
     </nav>
   </div>
 </header>

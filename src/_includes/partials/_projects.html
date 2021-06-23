@@ -2,20 +2,14 @@
   <div class="has-border">
     <h2>Latest Projects</h2>
   </div>
-  <div>
-    <ol style="list-style: none;">
-      <li>
-        <a href="https://github-jobs-peach.vercel.app/" target="_blank" class="external"><span>Github Jobs</span></a>
-      </li>
-      <li>
-        <a href="https://reactjs-tailwindcss.vercel.app/" target="_blank" class="external"><span>ReactJS TailwindCSS Components</span></a>
-      </li>
-      <li>
-        <a href="https://gs-strapi-fe.vercel.app/" target="_blank" class="external"><span>EGGCELLENT</span></a>
-      </li>
-      <li>
-        <a href="https://the-planet.vercel.app/" target="_blank" class="external"><span>THE PLANET</span></a>
-      </li>
-    </ol>
+
+<div>
+  <ol class="no-style">
+{% for links in userData.projects %}
+  <li>
+    <a href="{{ links.link }}" target="_blank" class="external" rel="noreferrer">{{ links.label }}</a>
+  </li>
+{% endfor %}
+</ol>
   </div>
 </section>

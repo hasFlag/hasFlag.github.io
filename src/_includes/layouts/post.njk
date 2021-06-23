@@ -4,8 +4,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  
+  <!-- capture the CSS content as a Nunjucks variable -->
+  {% set css %}
+    {% include "css/critical.css" %}
+  {% endset %}
+  <!-- feed it through our cssmin filter to minify -->
+  <style>
+    {{ css | cssmin | safe }}
+  </style>
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}" />
   <link rel="stylesheet" href="{{ '/assets/css/prism.css' | url }}" />
+
   <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
   <script async="" src="https://www.googletagmanager.com/gtag/js?id={{userData.googleAnalyticsCode}}"></script>
   <script>function gtag() { window.dataLayer && window.dataLayer.push(arguments) } window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "{{userData.googleAnalyticsCode}}", { send_page_view: !1 })</script>
@@ -23,7 +33,7 @@
   <link rel="apple-touch-icon" sizes="384x384" href="/assets/icons/favicon-384x384.png">
   <link rel="apple-touch-icon" sizes="512x512" href="/assets/icons/favicon-512x512.png">
 
-  <title>{{ title }}</title>
+  <title>{{ userData.siteName }} - {{ title }}</title>
 
   <meta property="og:url" content="{{userData.websiteUrl}}/blog/{{ title | slug }}">
   <meta property="og:author" content="{{userData.siteName}}">
@@ -51,6 +61,14 @@
     </main>
     {% include "partials/_footer.html" %}
   </div>
-  <script src="{{ '/assets/js/scripts.js' | url }}"></script>
+
+  <!-- capture the JS content as a Nunjucks variable -->
+  {% set js %}
+    {% include "js/scripts.js" %}
+  {% endset %}
+  <!-- feed it through our jsmin filter to minify -->
+  <script>
+    {{ js | jsmin | safe }}
+  </script>
 </body>
 </html>

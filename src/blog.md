@@ -5,7 +5,7 @@ layout: base
 
 ## Blog posts
 
-<ul style="list-style: none">
+<ul class="no-style">
 {% for post in collections.posts %}
   <li>
     <article class="post-list-item" itemscope="" itemtype="http://schema.org/Article">
@@ -15,8 +15,9 @@ layout: base
             <span itemprop="headline">{{ post.data.title }}</span>
           </a>
         </h2>
+        <small>{{ post.data.ogDescription }}</small>
         <p>
-          <time itemprop="datePublished">{{ post.data.date }}</time><small> - 3 min read</small>
+          <time itemprop="datePublished"><strong>Published on:</strong> {{ post.data.date }}</time>
         </p>
       </header>
     </article>

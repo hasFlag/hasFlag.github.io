@@ -1,8 +1,12 @@
 const fs = require("fs");
+const htmlmin = require("html-minifier");
+const CleanCSS = require("clean-css");
+const readingTime = require("eleventy-plugin-reading-time");
+const { minify } = require("terser");
 const Image = require("@11ty/eleventy-img");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
-(() => {
+const compileImages = () => {
   // directory path
   const imgDir = "./src/assets/img/";
 
@@ -27,7 +31,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
       }
     });
   });
-})();
+};
 
 (async () => {
   await Image("./src/assets/icons/favicon.png", {
@@ -42,11 +46,44 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/css/");
-  eleventyConfig.addPassthroughCopy("./src/assets/js/");
 
   eleventyConfig.addLayoutAlias("base", "layouts/base.njk");
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(readingTime);
+
+  compileImages();
+
+  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+    if (outputPath && outputPath.endsWith(".html")) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+      });
+      return minified;
+    }
+
+    return content;
+  });
+
+  eleventyConfig.addFilter("cssmin", function (code) {
+    return new CleanCSS({}).minify(code).styles;
+  });
+
+  eleventyConfig.addNunjucksAsyncFilter(
+    "jsmin",
+    async function (code, callback) {
+      try {
+        const minified = await minify(code);
+        callback(null, minified.code);
+      } catch (err) {
+        console.error("Terser error: ", err);
+        // Fail gracefully.
+        callback(null, code);
+      }
+    }
+  );
 
   return {
     dir: {

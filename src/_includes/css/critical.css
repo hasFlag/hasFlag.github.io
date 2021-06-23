@@ -1,0 +1,256 @@
+:root {
+  --maxWidth-4xl: 64rem;
+  --maxWidth-full: "100%";
+  --maxWidth-wrapper: var(--maxWidth-4xl);
+  --spacing-px: "1px";
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  --spacing-32: 8rem;
+  --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --fontFamily-serif: "Inter", "Georgia", Cambria, "Times New Roman", Times,
+    serif;
+  --font-body: var(--fontFamily-serif);
+  --font-heading: var(--fontFamily-sans);
+  --fontSize-root: 16px;
+  --lineHeight-none: 1;
+  --lineHeight-tight: 1.1;
+  --lineHeight-normal: 1.5;
+  --lineHeight-relaxed: 1.625;
+  /* 1.200 Minor Third Type Scale */
+  --fontSize-0: 0.833rem;
+  --fontSize-1: 1rem;
+  --fontSize-2: 1.2rem;
+  --fontSize-3: 1.44rem;
+  --fontSize-4: 1.728rem;
+  --fontSize-5: 1.9rem;
+  --fontSize-6: 2rem;
+  --fontSize-7: 2.1rem;
+
+  --color-text-primary: #111827;
+  --color-bg: #fff;
+  --color-text-secondary: #0034a5;
+  --color-theme-toggle: var(--color-text-primary);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fontSize-root);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg);
+}
+
+body.dark {
+  --color-text-primary: #fff;
+  --color-bg: #111827;
+  --color-text-secondary: #0051ff;
+  --color-theme-toggle: #ffc600;
+}
+
+picture {
+  display: block;
+  width: var(--maxWidth-full);
+  text-align: center;
+}
+
+img {
+  margin-bottom: var(--spacing-5);
+}
+
+/* Normalize */
+
+p {
+  line-height: var(--lineHeight-relaxed);
+  --baseline-multiplier: 0.179;
+  --x-height-multiplier: 0.35;
+  margin: var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0);
+  padding: var(--spacing-0);
+}
+
+ul,
+ol {
+  margin-left: var(--spacing-0);
+  margin-right: var(--spacing-0);
+  padding: var(--spacing-0);
+  margin-bottom: var(--spacing-8);
+  list-style-position: outside;
+  list-style-image: none;
+}
+
+ul li,
+ol li {
+  padding-left: var(--spacing-0);
+  margin-bottom: calc(var(--spacing-8) / 2);
+  margin-left: var(--spacing-5);
+}
+
+ol.no-style,
+ul.no-style {
+  list-style: none;
+}
+
+ol.no-style > li,
+ul.no-style > li {
+  margin-left: var(--spacing-0);
+}
+
+li > p {
+  margin-bottom: calc(var(--spacing-8) / 2);
+}
+
+li *:last-child {
+  margin-bottom: var(--spacing-0);
+}
+
+li > ul {
+  margin-left: var(--spacing-8);
+  margin-top: calc(var(--spacing-8) / 2);
+}
+
+blockquote {
+  color: var(--color-text-light);
+  margin-left: calc(-1 * var(--spacing-6));
+  margin-right: var(--spacing-8);
+  padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
+  border-left: var(--spacing-1) solid var(--color-primary);
+  font-size: var(--fontSize-2);
+  font-style: italic;
+  margin-bottom: var(--spacing-8);
+}
+
+blockquote > :last-child {
+  margin-bottom: var(--spacing-0);
+}
+
+blockquote > ul,
+blockquote > ol {
+  list-style-position: inside;
+}
+
+table {
+  width: var(--maxWidth-full);
+  margin-bottom: var(--spacing-8);
+  border-collapse: collapse;
+  border-spacing: 0.25rem;
+}
+
+table thead tr th {
+  border-bottom: var(--spacing-px) solid var(--color-primary);
+}
+
+/* Toggle Mode */
+.toggleMode {
+  opacity: 0.65;
+  position: relative;
+  border-radius: 5px;
+  width: 40px;
+  height: 25px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  transition: opacity 0.3s ease 0s;
+  -webkit-transition: opacity 0.3s ease 0s;
+  -moz-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  padding: var(--spacing-0);
+  appearance: none;
+}
+
+.toggleMode:hover,
+.toggleMode:focus {
+  opacity: 1;
+}
+
+.toggleMode div {
+  pointer-events: none;
+  text-indent: -9999px;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  transition: all 0.45s ease 0s;
+  -webkit-transition: all 0.45s ease 0s;
+  -moz-transition: all 0.45s ease 0s;
+  -o-transition: all 0.45s ease 0s;
+  overflow: hidden;
+  box-shadow: inset 8px -8px 0px 0px var(--color-theme-toggle);
+}
+
+.toggleMode[data-theme="dark"] div {
+  border: 4px solid var(--color-theme-toggle);
+  background-color: var(--color-theme-toggle);
+  transform: scale(0.55);
+  -webkit-transform: scale(0.55);
+  -moz-transform: scale(0.55);
+  -o-transform: scale(0.55);
+  transition: all 0.45s ease 0s;
+  overflow: visible;
+  box-shadow: none;
+}
+
+.toggleMode[data-theme="dark"] div:before {
+  content: "";
+  position: absolute;
+  right: -9px;
+  top: -9px;
+  height: 24px;
+  width: 24px;
+  border: 2px solid var(--color-theme-toggle);
+  border-radius: 50%;
+  transform: translate(14px, -14px);
+  -webkit-transform: translate(14px, -14px);
+  -moz-transform: translate(14px, -14px);
+  -o-transform: translate(14px, -14px);
+  opacity: 0;
+  transition: transform 0.45s ease 0s;
+}
+
+.toggleMode[data-theme="dark"] div:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: -4px 0px 0px -4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0 -23px 0 var(--color-theme-toggle),
+    0 23px 0 var(--color-theme-toggle), 23px 0 0 var(--color-theme-toggle),
+    -23px 0 0 var(--color-theme-toggle), 15px 15px 0 var(--color-theme-toggle),
+    -15px 15px 0 var(--color-theme-toggle),
+    15px -15px 0 var(--color-theme-toggle),
+    -15px -15px 0 var(--color-theme-toggle);
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  transition: all 0.35s ease 0s;
+  -webkit-transition: all 0.35s ease 0s;
+  -moz-transition: all 0.35s ease 0s;
+  -o-transition: all 0.35s ease 0s;
+}
+/* Toggle Mode ends */
