@@ -1,14 +1,15 @@
 ---
 title: Aria is not my thing 🚫
 date: "2021-03-27"
+permalink: /blog/aria-is-not-my-thing.html
 ogDescription: I am reading a lot about accessibility guidelines and met/working with some people who are responsible to deliver accessible experiences.
-ogImage: /assets/img/are-you-logging-your-nodejs-code-800w.jpeg
+ogImage: /assets/img/aria-is-not-my-thing-800w.jpeg
 ---
 
 <picture>
-  <source srcset="/assets/img/are-you-logging-your-nodejs-code-800w.webp" media="(min-width: 1000px)">
-  <source srcset="/assets/img/are-you-logging-your-nodejs-code-640w.webp" media="(min-width: 800px)">
-  <img srcset="/assets/img/are-you-logging-your-nodejs-code-320w.webp" alt="Aria is not my thing" loading="lazy">
+  <source srcset="/assets/img/aria-is-not-my-thing-800w.webp" media="(min-width: 1000px)">
+  <source srcset="/assets/img/aria-is-not-my-thing-640w.webp" media="(min-width: 800px)">
+  <img srcset="/assets/img/aria-is-not-my-thing-320w.webp" alt="Aria is not my thing" loading="lazy">
 </picture>
 
 I am reading a lot about accessibility guidelines and met/working with some people who are responsible to deliver accessible experiences. Accessibility is something which you can't just archive by adding `aria` attributes to your <abbr title="Document Object Model">DOM</abbr> elements. After all, there is no need to add the `aria` attribute if you are using the correct DOM element while building your website.

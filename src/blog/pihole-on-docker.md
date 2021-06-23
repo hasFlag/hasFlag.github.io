@@ -1,6 +1,7 @@
 ---
 title: PiHole on Docker
 date: "2021-05-21"
+permalink: /blog/pihole-on-docker.html
 ogDescription: I am reading a lot about accessibility guidelines and met/working with some people who are responsible to deliver accessible experiences.
 ogImage: /assets/img/pihole-on-docker-800w.jpeg
 ---

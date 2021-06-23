@@ -1,6 +1,7 @@
 ---
 title: Can we use Google services without compromising privacy?
 date: "2021-02-24"
+permalink: /blog/can-we-use-google-services-without-compromising-privacy.html
 ogDescription: “Google” is becoming an important part of ours lives, from searching anything on Google or watching an interesting video on YouTube you heavily rely on Google services.
 ogImage: /assets/img/google-vs-tor-800w.jpeg
 ---

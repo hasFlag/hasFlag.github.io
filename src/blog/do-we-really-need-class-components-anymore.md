@@ -1,6 +1,7 @@
 ---
 title: Do we really need class components anymore?
 date: "2021-04-21"
+permalink: /blog/do-we-really-need-class-components-anymore.html
 ogDescription: ReactJS is a mature enough library that becomes the first choice for developers. When ReactJS got launched it had a strong concept of class components.
 ogImage: /assets/img/do-we-really-need-class-components-anymore-800w.jpeg
 ---
