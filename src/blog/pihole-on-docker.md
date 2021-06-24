@@ -12,7 +12,7 @@ ogImage: /assets/img/pihole-on-docker-800w.jpeg
   <img srcset="/assets/img/pihole-on-docker-320w.webp" alt="featured" loading="lazy">
 </picture>
 
-This article is my follow-up article to [Up and running with RaspberryPi with Docker](/blog/up-and-running-with-raspberrypi-with-docker). In the previous article, I showed how you can configure docker and docker-compose on your RaspberryPi.
+This article is my follow-up article to [Up and running with RaspberryPi with Docker](/blog/up-and-running-with-raspberrypi-with-docker.html). In the previous article, I showed how you can configure docker and docker-compose on your RaspberryPi.
 
 In this article, I will show how you can restrict external traffic from your RaspberryPi with [PiHole](https://hub.docker.com/r/pihole/pihole) using docker and docker-compose.
 
