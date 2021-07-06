@@ -102,12 +102,12 @@ a:hover {
 .author-image-regular {
   width: var(--spacing-16);
   border-radius: var(--spacing-8);
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .author-name {
   font-weight: 600;
   margin-bottom: var(--spacing-2);
-  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .author-name,
