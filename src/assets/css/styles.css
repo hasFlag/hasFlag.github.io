@@ -79,6 +79,9 @@ a:hover {
 
 .blog-post > header h1 {
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
+  font-size: var(--spacing-8);
+  display: block;
+  text-align: center;
 }
 
 .global-header > div:last-child nav {
@@ -95,6 +98,26 @@ a:hover {
 }
 
 /* Header section ends */
+
+.author-image-regular {
+  width: var(--spacing-16);
+  border-radius: var(--spacing-8);
+}
+
+.author-name {
+  font-weight: 600;
+  margin-bottom: var(--spacing-2);
+}
+
+.author-name,
+.published-date {
+  display: block;
+  text-align: center;
+}
+
+.published-date {
+  margin-bottom: var(--spacing-8);
+}
 
 .segment > div:first-child {
   display: flex;

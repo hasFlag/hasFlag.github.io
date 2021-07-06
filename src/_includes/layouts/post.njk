@@ -52,9 +52,10 @@
     <main>
       <article class="blog-post" itemscope="" itemtype="http://schema.org/Article">
         <header>
+          <div class="text-center"><img src="/assets/img/author-64x64.png" class="author-image-regular" /></div>
+          <span class="author-name">Gurpreet Singh</span>
+          <time itemprop="datePublished" class="published-date">{{ date | dateFormat }}</time>
           <h1 itemprop="headline">{{title}}</h1>
-          <time itemprop="datePublished"><strong>Published on: </strong>{{ date | dateFormat }}</time>
-          <small> - <a href="{{userData.editFilePath}}{{page.inputPath}}">Edit</a></small>
         </header>
         <section itemprop="articleBody">
           {{ content | safe }}

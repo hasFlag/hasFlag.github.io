@@ -43,6 +43,14 @@ const compileImages = () => {
       return `favicon-${width}x${width}.${format}`;
     },
   });
+  await Image("./src/assets/author/gurpreet-singh.jpg", {
+    widths: [32, 64, 500],
+    formats: ["png"],
+    outputDir: "./public/assets/img/",
+    filenameFormat: function (id, src, width, format, options) {
+      return `author-${width}x${width}.${format}`;
+    },
+  });
 })();
 
 module.exports = function (eleventyConfig) {
