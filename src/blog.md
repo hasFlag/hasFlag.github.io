@@ -1,6 +1,7 @@
 ---
 title: Gurpreet Singh - Blog
 layout: base
+encoding: UTF-8
 ---
 
 ## Blog posts
