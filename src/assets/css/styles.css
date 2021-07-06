@@ -59,7 +59,7 @@ a:hover {
 .global-wrapper {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
-  padding: var(--spacing-10) var(--spacing-5);
+  padding: var(--spacing-5) var(--spacing-3);
 }
 
 .global-header {
