@@ -1,0 +1,4 @@
+Sitemap: https://gsin.in/sitemap.xml
+
+User-agent: *
+Disallow:

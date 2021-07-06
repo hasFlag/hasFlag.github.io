@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>{{ title }}</title>
+  <meta name="google-site-verification" content="{{site.googleSiteVerificationCode}}">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
@@ -15,7 +17,6 @@
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
   <link rel="alternate" type="application/rss+xml" href="/rss.xml">
-
   <link rel="icon" href="{{ '/assets/icons/favicon-32x32.png' | url }}" type="image/png">
   <meta name="theme-color" content="#9e9e9e">
   <link rel="apple-touch-icon" sizes="48x48" href="/assets/icons/favicon-48x48.png">
@@ -27,24 +28,20 @@
   <link rel="apple-touch-icon" sizes="384x384" href="/assets/icons/favicon-384x384.png">
   <link rel="apple-touch-icon" sizes="512x512" href="/assets/icons/favicon-512x512.png">
 
-  <title>{{ title }}</title>
-
-  <meta property="og:url" content="{{userData.websiteUrl}}">
-  <meta property="og:author" content="{{userData.siteName}}">
-  <meta property="og:site_name" content="{{userData.siteName}} - {{userData.subtitle}}">
+  <meta property="og:url" content="{{site.url}}">
+  <meta property="og:author" content="{{site.siteName}}">
+  <meta property="og:site_name" content="{{site.siteName}} - {{site.subtitle}}">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@{{userData.twitter}}">
   <meta name="twitter:creator" content="@{{userData.twitter}}">
-  <meta name="google-site-verification" content="{{userData.googleSiteVerificationCode}}">
-
   <meta name="description" content="Frontend Architect at PublicisSapient, Frontend Consultant interested in making lives of frontend developers easier.">
   <meta property="og:description" content="Frontend Architect at PublicisSapient, Frontend Consultant interested in making lives of frontend developers easier.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="{{userData.websiteUrl}}">
+  <meta property="og:image" content="{{site.url}}">
   <meta name="twitter:description" content="Frontend Architect at PublicisSapient, Frontend Consultant interested in making lives of frontend developers easier.">
-  <meta name="twitter:image" content="{{userData.websiteUrl}}">
-  <meta property="og:title" content="{{userData.siteName}}">
-  <meta name="twitter:title" content="{{userData.siteName}}">
+  <meta name="twitter:image" content="{{site.url}}">
+  <meta property="og:title" content="{{site.siteName}}">
+  <meta name="twitter:title" content="{{site.siteName}}">
 </head>
 <body>
   <div class="global-wrapper">

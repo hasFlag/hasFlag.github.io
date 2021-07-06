@@ -28,24 +28,24 @@
   <link rel="apple-touch-icon" sizes="384x384" href="/assets/icons/favicon-384x384.png">
   <link rel="apple-touch-icon" sizes="512x512" href="/assets/icons/favicon-512x512.png">
 
-  <title>{{ userData.siteName }} - {{ title }}</title>
+  <title>{{ site.siteName }} - {{ title }}</title>
 
-  <meta property="og:url" content="{{userData.websiteUrl}}/blog/{{ title | slug }}">
-  <meta property="og:author" content="{{userData.siteName}}">
-  <meta property="og:site_name" content="{{userData.siteName}} - {{userData.subtitle}}">
+  <meta property="og:url" content="{{site.url}}/blog/{{ title | slug }}">
+  <meta property="og:author" content="{{site.siteName}}">
+  <meta property="og:site_name" content="{{site.siteName}} - {{site.subtitle}}">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@{{userData.twitter}}">
   <meta name="twitter:creator" content="@{{userData.twitter}}">
-  <meta name="google-site-verification" content="{{userData.googleSiteVerificationCode}}">
+  <meta name="google-site-verification" content="{{site.googleSiteVerificationCode}}">
 
   <meta name="description" content="{{ogDescription}}">
   <meta property="og:description" content="{{ogDescription}}">
   <meta property="og:type" content="website">
   <meta property="og:image" content="{{ogImage}}">
   <meta name="twitter:description" content="{{ogDescription}}">
-  <meta name="twitter:image" content="{{userData.websiteUrl}}">
-  <meta property="og:title" content="{{userData.siteName}}">
-  <meta name="twitter:title" content="{{userData.siteName}}">
+  <meta name="twitter:image" content="{{site.url}}">
+  <meta property="og:title" content="{{site.siteName}}">
+  <meta name="twitter:title" content="{{site.siteName}}">
 </head>
 <body>
   <div class="global-wrapper">
