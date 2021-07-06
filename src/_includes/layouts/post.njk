@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>{{ site.siteName }} - {{ title }}</title>
+  <meta name="google-site-verification" content="{{site.googleSiteVerificationCode}}">
+  <meta name="robots" content="index, follow">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
   <!-- capture the CSS content as a Nunjucks variable -->
@@ -27,17 +30,13 @@
   <link rel="apple-touch-icon" sizes="256x256" href="/assets/icons/favicon-256x256.png">
   <link rel="apple-touch-icon" sizes="384x384" href="/assets/icons/favicon-384x384.png">
   <link rel="apple-touch-icon" sizes="512x512" href="/assets/icons/favicon-512x512.png">
-
-  <title>{{ site.siteName }} - {{ title }}</title>
-
+  
   <meta property="og:url" content="{{site.url}}/blog/{{ title | slug }}">
   <meta property="og:author" content="{{site.siteName}}">
   <meta property="og:site_name" content="{{site.siteName}} - {{site.subtitle}}">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@{{userData.twitter}}">
   <meta name="twitter:creator" content="@{{userData.twitter}}">
-  <meta name="google-site-verification" content="{{site.googleSiteVerificationCode}}">
-
   <meta name="description" content="{{ogDescription}}">
   <meta property="og:description" content="{{ogDescription}}">
   <meta property="og:type" content="website">
