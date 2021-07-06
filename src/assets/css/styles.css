@@ -107,6 +107,7 @@ a:hover {
 .author-name {
   font-weight: 600;
   margin-bottom: var(--spacing-2);
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .author-name,
