@@ -52,7 +52,9 @@
     <main>
       <article class="blog-post" itemscope="" itemtype="http://schema.org/Article">
         <header>
-          <div class="text-center"><img src="/assets/img/author-64x64.png" class="author-image-regular" /></div>
+          <div class="text-center">
+            <img src="/assets/img/author-64x64.png" alt="author" class="author-image-regular" srcset="/assets/img/author-128x128.png 2x" />
+          </div>
           <span class="author-name">Gurpreet Singh</span>
           <time itemprop="datePublished" class="published-date">{{ date | dateFormat }}</time>
           <h1 itemprop="headline">{{title}}</h1>

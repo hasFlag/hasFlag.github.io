@@ -44,7 +44,7 @@ const compileImages = () => {
     },
   });
   await Image("./src/assets/author/gurpreet-singh.jpg", {
-    widths: [32, 64, 500],
+    widths: [64, 128, 500],
     formats: ["png"],
     outputDir: "./public/assets/img/",
     filenameFormat: function (id, src, width, format, options) {
