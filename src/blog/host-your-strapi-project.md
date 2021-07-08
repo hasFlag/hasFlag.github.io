@@ -3,8 +3,15 @@ title: Host your Strapi project
 date: "2021-02-26"
 permalink: /blog/host-your-strapi-project.html
 ogDescription: In this article, I will walk you through the Strapi CMS setup on your local machine followed by deploying it to Heroku.
-ogImage: /assets/img/strapi-login-320w.jpeg
+ogImage: /assets/img/strapi-800w.jpeg
+featuredImage: /assets/img/strapi-640w.webp
 ---
+
+<picture>
+  <source srcset="/assets/img/strapi-800w.webp" media="(min-width: 1000px)">
+  <source srcset="/assets/img/strapi-640w.webp" media="(min-width: 800px)">
+  <img srcset="/assets/img/strapi-320w.webp" alt="Strapi project" loading="lazy">
+</picture>
 
 In this article, I will walk you through the Strapi CMS setup on your local machine followed by deploying it to Heroku.
 

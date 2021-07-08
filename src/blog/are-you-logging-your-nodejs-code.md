@@ -4,6 +4,7 @@ date: "2021-01-16"
 permalink: /blog/are-you-logging-your-nodejs-code.html
 ogDescription: Logs are an essential part of an application, it provides you deep level access of output comes from user inputs.
 ogImage: /assets/img/logging-800w.jpeg
+featuredImage: /assets/img/logging-640w.webp
 ---
 
 <picture>

@@ -4,6 +4,7 @@ date: "2021-02-25"
 permalink: /blog/my-first-strapi-project-experience.html
 ogDescription: When I was looking for some NodeJS based powerful CMS I found Strapi as a good example since it is not only popular these days but comes with nearly zero bootstrap footprints.
 ogImage: /assets/img/strapi-800w.jpeg
+featuredImage: /assets/img/strapi-640w.webp
 ---
 
 <picture>

@@ -1,24 +1,4 @@
 /* Normalize ends */
-.post-list-item {
-  margin-bottom: var(--spacing-8);
-  margin-top: var(--spacing-8);
-}
-
-.post-list-item p {
-  margin-bottom: var(--spacing-0);
-}
-
-.post-list-item h2 {
-  font-size: var(--fontSize-3);
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-2);
-  margin-top: var(--spacing-0);
-}
-
-.post-list-item header {
-  margin-bottom: var(--spacing-2);
-}
-
 .emoji {
   padding-left: var(--spacing-2);
   padding-right: var(--spacing-3);
@@ -84,6 +64,46 @@ a:hover {
   text-align: center;
 }
 
+.blog-posts-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.blog-posts-wrapper .blog-post-card {
+  padding-left: var(--spacing-2);
+  padding-right: var(--spacing-2);
+  margin-bottom: var(--spacing-6);
+  box-sizing: border-box;
+}
+
+.blog-posts-wrapper .blog-post-card-cover {
+  width: var(--maxWidth-full);
+}
+
+.blog-post-card a {
+  display: block;
+  text-decoration: none;
+  color: var(--color-text-primary);
+}
+
+.blog-post-card .blog-post-card-cover img {
+  width: var(--maxWidth-full);
+  border-radius: var(--spacing-2);
+}
+
+.blog-post-card h1 {
+  font-size: var(--fontSize-4);
+  margin: var(--spacing-0);
+  margin-bottom: var(--spacing-2);
+}
+
+.blog-post-card time {
+  display: block;
+  margin-bottom: var(--spacing-2);
+}
+
 .global-header > div:last-child nav {
   text-align: center;
   margin-bottom: var(--spacing-2);
@@ -98,13 +118,15 @@ a:hover {
 }
 
 /* Header section ends */
+.shadow {
+  -webkit-box-shadow: 0 0 10px rgb(104, 104, 104);
+  -moz-box-shadow: 0 0 10px rgb(104, 104, 104);
+  box-shadow: 0 0 10px rgb(104, 104, 104);
+}
 
 .author-image-regular {
   width: var(--spacing-16);
   border-radius: var(--spacing-8);
-  -webkit-box-shadow: 0 0 10px rgb(104, 104, 104);
-  -moz-box-shadow: 0 0 10px rgb(104, 104, 104);
-  box-shadow: 0 0 10px rgb(104, 104, 104);
 }
 
 .author-name {
@@ -184,5 +206,12 @@ footer ul li {
   }
   .global-header > div:last-child nav {
     margin-bottom: var(--spacing-0);
+  }
+
+  .blog-posts-wrapper .blog-post-card {
+    width: 50%;
+    padding-left: var(--spacing-4);
+    padding-right: var(--spacing-4);
+    margin-bottom: var(--spacing-16);
   }
 }

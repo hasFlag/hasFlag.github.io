@@ -4,22 +4,27 @@ layout: base
 encoding: UTF-8
 ---
 
-## Blog posts
+# Blog posts
 
-<ul class="no-style">
+<section class="blog-posts-wrapper">
 {%- for post in collections.posts reversed -%}
-  <li>
-    <article class="post-list-item" itemscope="" itemtype="http://schema.org/Article">
-      <header>
-        <h2>
+  <div class="blog-post-card">
+    <article itemscope="" itemtype="http://schema.org/Article">
+      <div class="blog-post-card-cover">
+        <a itemprop="url" href="{{ post.url }}">
+          <img srcset="{{post.data.featuredImage}}" class="shadow" alt="{{post.data.title}}" loading="lazy">
+        </a>
+      </div>
+      <div class="w-full">
+        <h1>
           <a itemprop="url" href="{{ post.url }}">
             <span itemprop="headline">{{ post.data.title }}</span>
           </a>
-        </h2>
-        <time itemprop="datePublished"><strong>Published on:</strong> {{ post.date | dateFormat }}</time>
-      </header>
-      <p itemprop="description">{{ post.data.ogDescription }}</p>
+        </h1>
+        <a itemprop="url" href="{{ post.url }}"><time itemprop="datePublished" class="opacity-75">{{ post.date | dateFormat }}</time></a>
+        <a itemprop="url" href="{{ post.url }}"><p itemprop="description" class="opacity-75">{{ post.data.ogDescription }}</p></a>
+      </div>
     </article>
-  </li>
+  </div>
 {%- endfor -%}
-</ul>
+</section>

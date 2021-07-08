@@ -4,6 +4,7 @@ date: "2021-05-19"
 permalink: /blog/up-and-running-with-raspberrypi-with-docker.html
 ogDescription: I am reading a lot about accessibility guidelines and met/working with some people who are responsible to deliver accessible experiences.
 ogImage: /assets/img/docker_raspberrypi_setup-800w.jpeg
+featuredImage: /assets/img/docker_raspberrypi_setup-640w.webp
 ---
 
 <picture>

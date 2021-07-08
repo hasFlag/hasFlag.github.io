@@ -4,6 +4,7 @@ date: "2021-03-19"
 permalink: /blog/nodejs-login-service.html
 ogDescription: These days I often see developers struggle or invest too much time to create proper authorization modules in their Node.js based applications.
 ogImage: /assets/img/expressjs-passport-800w.jpeg
+featuredImage: /assets/img/expressjs-passport-640w.webp
 ---
 
 <picture>

@@ -4,6 +4,7 @@ date: "2021-03-27"
 permalink: /blog/aria-is-not-my-thing.html
 ogDescription: I am reading a lot about accessibility guidelines and met/working with some people who are responsible to deliver accessible experiences.
 ogImage: /assets/img/aria-is-not-my-thing-800w.jpeg
+featuredImage: /assets/img/aria-is-not-my-thing-640w.webp
 ---
 
 <picture>

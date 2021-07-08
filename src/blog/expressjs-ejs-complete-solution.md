@@ -4,6 +4,7 @@ date: "2021-03-02"
 permalink: /blog/expressjs-ejs-complete-solution.html
 ogDescription: People who have less time to invest and are familiar with the Handlebar template engine can quickly set up their website.
 ogImage: /assets/img/expressjs+ejs-640w.jpeg
+featuredImage: /assets/img/expressjs+ejs-640w.webp
 ---
 
 <picture>

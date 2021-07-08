@@ -4,6 +4,7 @@ date: "2021-05-08"
 permalink: /blog/my-react-stack-for-2021.html
 ogDescription: In this article, I will cover my ReactJS tech stack in which you might be interested. I will showcase what options are available in the market to start on a ReactJS based application.
 ogImage: /assets/img/my-react-stack-for-2021-800w.jpeg
+featuredImage: /assets/img/my-react-stack-for-2021-640w.webp
 ---
 
 <picture>

@@ -1,6 +1,6 @@
 :root {
   --maxWidth-4xl: 64rem;
-  --maxWidth-full: "100%";
+  --maxWidth-full: 100%;
   --maxWidth-wrapper: var(--maxWidth-4xl);
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -39,6 +39,10 @@
   --color-bg: #fff;
   --color-text-secondary: #0034a5;
   --color-theme-toggle: var(--color-text-primary);
+}
+
+.opacity-75 {
+  opacity: 0.75;
 }
 
 body {
