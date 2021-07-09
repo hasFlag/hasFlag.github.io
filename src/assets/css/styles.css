@@ -59,7 +59,7 @@ a:hover {
 
 .blog-post > header h1 {
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
-  font-size: var(--spacing-8);
+  font-size: var(--spacing-10);
   display: block;
   text-align: center;
 }
@@ -206,7 +206,7 @@ footer ul li {
 
 input[type="email"],
 button[type="submit"] {
-  border: 2px solid var(--color-text-primary);
+  border: 2px solid var(--color-text-secondary);
   padding: var(--spacing-4) var(--spacing-4);
   font-size: var(--fontSize-1);
 }
@@ -217,17 +217,18 @@ input[type="email"] {
 }
 
 button[type="submit"] {
-  background-color: transparent;
+  background-color: var(--color-text-secondary);
   text-transform: uppercase;
-  color: var(--color-text-primary);
+  color: var(--color-bg);
   cursor: pointer;
   font-weight: 700;
 }
 
 button[type="submit"]:hover,
 button[type="submit"]:focus {
-  color: var(--color-bg);
-  background-color: var(--color-text-primary);
+  -webkit-box-shadow: 0 0 10px rgb(104, 104, 104);
+  -moz-box-shadow: 0 0 10px rgb(104, 104, 104);
+  box-shadow: 0 0 10px rgb(104, 104, 104);
 }
 
 @media (min-width: 42rem) {

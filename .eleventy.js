@@ -6,6 +6,20 @@ const readingTime = require("eleventy-plugin-reading-time");
 const { minify } = require("terser");
 const Image = require("@11ty/eleventy-img");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const MONTHS = {
+  0: "Jan",
+  1: "Feb",
+  2: "Mar",
+  3: "Apr",
+  4: "May",
+  5: "Jun",
+  6: "Jul",
+  7: "Aug",
+  8: "Sep",
+  9: "Oct",
+  10: "Nov",
+  11: "Dec",
+};
 
 const compileImages = () => {
   // directory path
@@ -82,7 +96,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("dateFormat", function (value) {
     const dd = new Date(value);
-    return dd.toDateString();
+    return `${MONTHS[dd.getMonth()]} ${dd.getDate()}, ${dd.getFullYear()}`;
   });
 
   eleventyConfig.addNunjucksAsyncFilter(

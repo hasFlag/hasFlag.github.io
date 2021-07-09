@@ -1,6 +1,6 @@
 ---
 title: My first Strapi project experience
-date: "2021-02-25"
+date: "2021-02-26"
 permalink: /blog/my-first-strapi-project-experience.html
 ogDescription: When I was looking for some NodeJS based powerful CMS I found Strapi as a good example since it is not only popular these days but comes with nearly zero bootstrap footprints.
 ogImage: /assets/img/strapi-800w.jpeg
@@ -10,7 +10,7 @@ featuredImage: /assets/img/strapi-640w.webp
 <picture>
   <source srcset="/assets/img/strapi-800w.webp" media="(min-width: 1000px)">
   <source srcset="/assets/img/strapi-640w.webp" media="(min-width: 800px)">
-  <img srcset="/assets/img/strapi-320w.webp" alt="Aria is not my thing" loading="lazy">
+  <img srcset="/assets/img/strapi-320w.webp" alt="Strapi experience" loading="lazy">
 </picture>
 
 When I was looking for some NodeJS based powerful CMS I found Strapi as a good example since it is not only popular these days but comes with nearly zero bootstrap footprints.
