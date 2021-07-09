@@ -35,7 +35,7 @@
   --fontSize-6: 2rem;
   --fontSize-7: 2.1rem;
 
-  --color-text-primary: #111827;
+  --color-text-primary: #050505;
   --color-bg: #fff;
   --color-text-secondary: #0034a5;
   --color-theme-toggle: var(--color-text-primary);
@@ -259,4 +259,9 @@ table thead tr th {
 .text-center {
   display: block;
   text-align: center;
+}
+
+.display-none {
+  display: none;
+  visibility: hidden;
 }

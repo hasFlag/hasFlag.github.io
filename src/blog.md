@@ -28,3 +28,5 @@ encoding: UTF-8
   </div>
 {%- endfor -%}
 </section>
+
+{% include partials/_subscribe.html %}

@@ -198,6 +198,38 @@ footer ul li {
   padding: var(--spacing-2);
 }
 
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+input[type="email"],
+button[type="submit"] {
+  border: 2px solid var(--color-text-primary);
+  padding: var(--spacing-4) var(--spacing-4);
+  font-size: var(--fontSize-1);
+}
+
+input[type="email"] {
+  background-color: #fff;
+  color: #111827;
+}
+
+button[type="submit"] {
+  background-color: transparent;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  color: var(--color-bg);
+  background-color: var(--color-text-primary);
+}
+
 @media (min-width: 42rem) {
   .global-header > div:last-child {
     display: flex;
@@ -213,5 +245,17 @@ footer ul li {
     padding-left: var(--spacing-4);
     padding-right: var(--spacing-4);
     margin-bottom: var(--spacing-16);
+  }
+
+  .subscribe-form {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  input[type="email"] {
+    width: calc(var(--spacing-32) * 2);
+  }
+  button[type="submit"] {
+    width: var(--spacing-32);
   }
 }

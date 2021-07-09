@@ -1,0 +1,33 @@
+<h2 class="text-center">Subscribe</h2>
+<form id="subscribeForm" action="" class="subscribe-form">
+  <label for="email" class="display-none">email</label>
+  <input type="email" id="email" name="email" placeholder="Enter a valid email address" required>
+  <button type="submit">Send</button>
+</form>
+
+<script>
+  var form = document.getElementById("subscribeForm");
+  form.addEventListener("submit", formSubmit);
+
+  function formSubmit(e) {
+    e.preventDefault()
+
+    const formData = new FormData();
+    formData.append(
+      'email',
+      document.querySelector('input[name="email"]').value
+    )
+
+    fetch("https://getform.io/f/3c2c89ea-089f-4b07-be54-5b6d31c432f7",
+      {
+        method: "POST",
+        body: formData,
+      })
+      .then(response => {
+        form.innerHTML = "<p class=\"text-center\">Thank you.</p>";
+      })
+      .catch(error => {
+        form.innerHTML = "<p class=\"text-center\">We are facing some technical issues, please try later.</p>";
+      })
+  }
+</script>

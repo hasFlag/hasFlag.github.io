@@ -6,3 +6,4 @@ encoding: UTF-8
 
 {% include partials/_intro.html %}
 {% include partials/_projects.html %}
+{% include partials/_subscribe.html %}
