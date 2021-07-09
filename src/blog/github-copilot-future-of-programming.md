@@ -13,7 +13,7 @@ featuredImage: /assets/img/will-artificial-intelligence-replace-developers-640w.
   <img srcset="/assets/img/will-artificial-intelligence-replace-developers-320w.webp" alt="Strapi experience" loading="lazy">
 </picture>
 
-There were a couple of questions that came to my mind when I saw this first. In this article, I'll go through an example of the Copilot peer programming plugin for VSCode.
+There were a couple of questions that came to my mind when I saw this first. In this article, I'll go through an example of the **[Copilot](https://copilot.github.com/)** peer programming plugin for VSCode.
 
 ## What is GitHub Copilot? <a name="what-is-github-copilot" class="anchor" aria-hidden="true" href="#what-is-github-copilot">#</a>
 
@@ -38,6 +38,10 @@ function nonAltImages() {
   }
 }
 ```
+
+<div class="text-center">
+  <video controls src="../assets/videos/ai_coding.mov" poster="../assets/videos/cover_ai_coding.png" width="100%"></video>
+</div>
 
 Not only this but you can use this AI engine to write test cases for yourself.
 

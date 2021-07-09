@@ -69,6 +69,7 @@ const compileImages = () => {
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/css/");
+  eleventyConfig.addPassthroughCopy("./src/assets/videos/");
 
   eleventyConfig.addLayoutAlias("base", "layouts/base.njk");
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
